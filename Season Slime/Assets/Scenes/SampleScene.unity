@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 1096602873}
   - component: {fileID: 1096602872}
   - component: {fileID: 1096602871}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,6 +659,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Move
   moveSpeed: 3
   jumpForce: 8
+  groundCheckDistance: 1
+  isGrounded: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -4,7 +4,10 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
     [SerializeField]private float moveSpeed = 3f;
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField]private float jumpForce = 8f;
+    [SerializeField]private float groundCheckDistance = 0.1f;
+    [SerializeField]private bool isGrounded;
+    [SerializeField]private LayerMask groundLayer;
 
     private float xInput;
     private Rigidbody2D rb;
@@ -23,11 +26,24 @@ public class Move : MonoBehaviour
 
     private void SlimeJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
+    }
+
+    private void HandleFlip()
+    {
+        if(rb.linearVelocity.x > 0 && !facingRight)
+        {
+            SlimeFlip();
+        }
+        else if(rb.linearVelocity.x < 0 && facingRight)
+        {
+            SlimeFlip();
+        }
     }
 
     private void SlimeFlip()
@@ -40,6 +56,6 @@ public class Move : MonoBehaviour
     {
         SlimeMove();
         SlimeJump();
-        SlimeFlip();
+        HandleFlip();
     }
 }
