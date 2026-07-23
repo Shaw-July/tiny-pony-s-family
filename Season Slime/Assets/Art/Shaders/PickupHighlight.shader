@@ -21,6 +21,10 @@ Shader "SeasonSlime/PickupHighlight"
         _Stripes("Stripes", Range(1.0, 32.0)) = 16.0
         _StripeWidth("Stripe Width", Range(0.0, 1.0)) = 0.5
         [Toggle] _ShowSprite("Show Sprite", Float) = 1
+        // UV rect of the current sprite frame inside the texture: xy = min, zw = size.
+        // Updated automatically by the PickupHighlight.cs component (needed for
+        // sprite-sheet / flipbook sprites). Leave (0,0,1,1) for single sprites.
+        _SpriteRect("Sprite UV Rect", Vector) = (0.0, 0.0, 1.0, 1.0)
     }
 
     SubShader
@@ -60,6 +64,7 @@ Shader "SeasonSlime/PickupHighlight"
                 float _Stripes;
                 float _StripeWidth;
                 float _ShowSprite;
+                float4 _SpriteRect;
             CBUFFER_END
 
             struct Attributes
@@ -90,6 +95,15 @@ Shader "SeasonSlime/PickupHighlight"
                 return SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv).a;
             }
 
+            // Sample alpha, clamped inside the current frame rect so the
+            // outline never bleeds in from neighbouring sprite-sheet frames.
+            float SampleAlphaClamped(float2 uv, float2 pixelSize)
+            {
+                float2 rectMin = _SpriteRect.xy + pixelSize * 0.5;
+                float2 rectMax = _SpriteRect.xy + _SpriteRect.zw - pixelSize * 0.5;
+                return SampleAlpha(clamp(uv, rectMin, rectMax));
+            }
+
             half4 Frag(Varyings input) : SV_Target
             {
                 float2 uv = input.uv;
@@ -98,19 +112,21 @@ Shader "SeasonSlime/PickupHighlight"
                 half4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, uv) * input.color;
 
                 // 4-neighbour check: is any adjacent texel opaque?
-                bool within = SampleAlpha(uv + pixelSize * float2( 1.0,  0.0)) > 0.0;
-                within = within || SampleAlpha(uv + pixelSize * float2( 0.0, -1.0)) > 0.0;
-                within = within || SampleAlpha(uv + pixelSize * float2( 0.0,  1.0)) > 0.0;
-                within = within || SampleAlpha(uv + pixelSize * float2(-1.0,  0.0)) > 0.0;
+                bool within = SampleAlphaClamped(uv + pixelSize * float2( 1.0,  0.0), pixelSize) > 0.0;
+                within = within || SampleAlphaClamped(uv + pixelSize * float2( 0.0, -1.0), pixelSize) > 0.0;
+                within = within || SampleAlphaClamped(uv + pixelSize * float2( 0.0,  1.0), pixelSize) > 0.0;
+                within = within || SampleAlphaClamped(uv + pixelSize * float2(-1.0,  0.0), pixelSize) > 0.0;
 
                 bool outline = within && (SampleAlpha(uv) == 0.0);
 
                 float rotation = _Time.y * _RotationSpeed;
 
-                // Rotating stripe pattern around the sprite-rect centre,
-                // computed on integer pixel coordinates (crisp pixel-art look).
-                float px = floor((uv.x - 0.5) / pixelSize.x);
-                float py = floor((uv.y - 0.5) / pixelSize.y);
+                // Rotating stripe pattern around the centre of the CURRENT FRAME
+                // (not the whole texture), computed on integer pixel coordinates
+                // for a crisp pixel-art look.
+                float2 frameCentre = _SpriteRect.xy + _SpriteRect.zw * 0.5;
+                float px = floor((uv.x - frameCentre.x) / pixelSize.x);
+                float py = floor((uv.y - frameCentre.y) / pixelSize.y);
                 float angle01 = (atan2(px * cos(rotation) + py * sin(rotation),
                                        py * cos(rotation) - px * sin(rotation)) - PI) / -TWO_PI;
                 float fill = fmod(angle01, 1.0 / _Stripes) < (_StripeWidth / _Stripes) ? 1.0 : 0.0;
