@@ -11,11 +11,13 @@ public class Move : MonoBehaviour
 
     private float xInput;
     private Rigidbody2D rb;
+    private Animator anim;
     private bool facingRight;
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void SlimeMove()
@@ -32,6 +34,12 @@ public class Move : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
 
+    }
+
+    private void HandleAnim()
+    {
+        bool isMoving = rb.linearVelocity.x != 0;
+        anim.SetFloat("xVelocity", rb.linearVelocity.x);
     }
 
     private void HandleFlip()
@@ -57,5 +65,6 @@ public class Move : MonoBehaviour
         SlimeMove();
         SlimeJump();
         HandleFlip();
+        HandleAnim();
     }
 }
