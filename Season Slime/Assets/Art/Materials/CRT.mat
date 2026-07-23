@@ -26,7 +26,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Aberration: 0.01
+    - _Aberration: 0
     - _Brightness: 1.82
     - _Discolor: 0
     - _DistortIntensity: 0.05
