@@ -17,6 +17,10 @@ public static class SeasonParticleGenerator
     private const string MaterialDir = "Assets/Art/Materials";
     private const string VfxDir = "Assets/Art/VFX";
 
+    // Bump this to force automatic regeneration after script changes.
+    private const int GeneratorVersion = 2;
+    private const string VersionFilePath = VfxDir + "/.generator-version";
+
     private static readonly string[] PrefabPaths =
     {
         VfxDir + "/PS_SpringPetals.prefab",
@@ -35,13 +39,20 @@ public static class SeasonParticleGenerator
                 return;
             }
 
+            bool upToDate = File.Exists(VersionFilePath)
+                && File.ReadAllText(VersionFilePath).Trim() == GeneratorVersion.ToString();
+
             foreach (string path in PrefabPaths)
             {
                 if (!File.Exists(path))
                 {
-                    Generate();
-                    return;
+                    upToDate = false;
                 }
+            }
+
+            if (!upToDate)
+            {
+                Generate();
             }
         };
     }
@@ -69,6 +80,7 @@ public static class SeasonParticleGenerator
         CreateWinterSnow(snowMat);
 
         AssetDatabase.SaveAssets();
+        File.WriteAllText(VersionFilePath, GeneratorVersion.ToString());
         Debug.Log("[SeasonParticleGenerator] Season particle prefabs generated in " + VfxDir);
     }
 
@@ -232,10 +244,12 @@ public static class SeasonParticleGenerator
         var emission = ps.emission;
         emission.rateOverTime = 8f;
 
+        // NOTE: x, y and z must all use the same MinMaxCurve mode.
         var velocity = ps.velocityOverLifetime;
         velocity.enabled = true;
         velocity.x = new ParticleSystem.MinMaxCurve(-1.5f, -0.5f);
         velocity.y = new ParticleSystem.MinMaxCurve(-1.2f, -0.5f);
+        velocity.z = new ParticleSystem.MinMaxCurve(0f, 0f);
 
         var rotation = ps.rotationOverLifetime;
         rotation.enabled = true;
@@ -269,9 +283,12 @@ public static class SeasonParticleGenerator
         var emission = ps.emission;
         emission.rateOverTime = 12f;
 
+        // NOTE: x, y and z must all use the same MinMaxCurve mode.
         var velocity = ps.velocityOverLifetime;
         velocity.enabled = true;
+        velocity.x = new ParticleSystem.MinMaxCurve(-0.1f, 0.1f);
         velocity.y = new ParticleSystem.MinMaxCurve(0.6f, 1.4f);
+        velocity.z = new ParticleSystem.MinMaxCurve(0f, 0f);
 
         var noise = ps.noise;
         noise.enabled = true;
@@ -306,10 +323,12 @@ public static class SeasonParticleGenerator
         var emission = ps.emission;
         emission.rateOverTime = 6f;
 
+        // NOTE: x, y and z must all use the same MinMaxCurve mode.
         var velocity = ps.velocityOverLifetime;
         velocity.enabled = true;
         velocity.x = new ParticleSystem.MinMaxCurve(-1.8f, -0.8f);
         velocity.y = new ParticleSystem.MinMaxCurve(-1.3f, -0.6f);
+        velocity.z = new ParticleSystem.MinMaxCurve(0f, 0f);
 
         var rotation = ps.rotationOverLifetime;
         rotation.enabled = true;
@@ -343,10 +362,12 @@ public static class SeasonParticleGenerator
         var emission = ps.emission;
         emission.rateOverTime = 30f;
 
+        // NOTE: x, y and z must all use the same MinMaxCurve mode.
         var velocity = ps.velocityOverLifetime;
         velocity.enabled = true;
         velocity.x = new ParticleSystem.MinMaxCurve(-0.6f, -0.2f);
         velocity.y = new ParticleSystem.MinMaxCurve(-1.2f, -0.6f);
+        velocity.z = new ParticleSystem.MinMaxCurve(0f, 0f);
 
         var noise = ps.noise;
         noise.enabled = true;
