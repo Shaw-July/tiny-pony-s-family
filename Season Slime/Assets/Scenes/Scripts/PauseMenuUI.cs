@@ -3,35 +3,62 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenuUI : MonoBehaviour
 {
+    [Header("UI References")]
     [SerializeField] private GameObject pausePanel;
 
     private bool isPaused;
 
     private void Start()
     {
-        SetPaused(false);
+        // 确保游戏开始时不是暂停状态
+        Time.timeScale = 1f;
+        isPaused = false;
+
+        if (pausePanel != null)
+        {
+            pausePanel.SetActive(false);
+        }
+    }
+
+    public void PauseGame()
+    {
+        if (isPaused)
+        {
+            return;
+        }
+
+        isPaused = true;
+        pausePanel.SetActive(true);
+
+        // 停止所有依赖 Time.deltaTime 的游戏逻辑
+        Time.timeScale = 0f;
     }
 
     public void ContinueGame()
     {
-        SetPaused(false);
-    }
+        if (!isPaused)
+        {
+            return;
+        }
 
-    public void TogglePause()
-    {
-        SetPaused(!isPaused);
+        isPaused = false;
+        pausePanel.SetActive(false);
+
+        // 恢复游戏时间
+        Time.timeScale = 1f;
     }
 
     public void RestartGame()
     {
+        // 重新加载场景之前必须恢复时间
         Time.timeScale = 1f;
 
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame()
     {
+        // 防止进入其他场景后仍然保持暂停
         Time.timeScale = 1f;
 
 #if UNITY_EDITOR
@@ -39,17 +66,5 @@ public class PauseMenuUI : MonoBehaviour
 #else
         Application.Quit();
 #endif
-    }
-
-    private void SetPaused(bool paused)
-    {
-        isPaused = paused;
-
-        if (pausePanel != null)
-        {
-            pausePanel.SetActive(paused);
-        }
-
-        Time.timeScale = paused ? 0f : 1f;
     }
 }
