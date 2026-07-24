@@ -3,31 +3,27 @@ using UnityEngine.SceneManagement;
 
 public class EndScreenUI : MonoBehaviour
 {
-    [SerializeField] private GameObject endPanel;
-
-    private void Start()
+    private void Awake()
     {
-        endPanel.SetActive(false);
+        gameObject.SetActive(false);
     }
 
-    public void ShowEndScreen()
+    public void Show()
     {
-        endPanel.SetActive(true);
-
+        gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
 
     public void RestartGame()
     {
         Time.timeScale = 1f;
-
-        Scene currentScene = SceneManager.GetActiveScene();
-
-        SceneManager.LoadScene(currentScene.buildIndex);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void QuitGame()
     {
+        Time.timeScale = 1f;
+
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #else
