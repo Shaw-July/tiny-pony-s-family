@@ -1747,7 +1747,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 3ec3cd18bafd5964badcfcfdd2f5abc7, type: 3}
+  m_Resource: {fileID: 8300000, guid: e264feb8077724f4d83f536bdd877d6a, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2094,7 +2094,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cead9459307f4441891d02f42f0c878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanBeCrushed
-  anim: {fileID: 0}
 --- !u!1 &382826157
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,12 +5951,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a23561e1164efd499953cc03c6383cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CanBeBroken
-  hintUI: {fileID: 0}
-  animationLength: 1
-  isPlayerInRange: 0
-  anim: {fileID: 0}
-  slimeMode: {fileID: 0}
-  isPlayingAction: 0
 --- !u!1 &1516587699
 GameObject:
   m_ObjectHideFlags: 0
