@@ -1,0 +1,819 @@
+fileFormatVersion: 2
+guid: 4bde7bece3219154683640f5f13b7a37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 592676331764739802
+    second: Winslime_jump_0
+  - first:
+      213: 6747809103075170555
+    second: Winslime_jump_1
+  - first:
+      213: -8258617532020867971
+    second: Winslime_jump_2
+  - first:
+      213: -3340815813316406755
+    second: Winslime_jump_3
+  - first:
+      213: -4187595481535591100
+    second: Winslime_jump_4
+  - first:
+      213: -9212271193083489617
+    second: Winslime_jump_5
+  - first:
+      213: -7378464522053430654
+    second: Winslime_jump_6
+  - first:
+      213: 4493102970939317259
+    second: Winslime_jump_7
+  - first:
+      213: 6381099101134518857
+    second: Winslime_jump_8
+  - first:
+      213: 4821831063855093529
+    second: Winslime_jump_9
+  - first:
+      213: -7889413978049180698
+    second: Winslime_jump_10
+  - first:
+      213: -1965137362816230629
+    second: Winslime_jump_11
+  - first:
+      213: 628661295655639111
+    second: Winslime_jump_12
+  - first:
+      213: 7546705474480641818
+    second: Winslime_jump_13
+  - first:
+      213: 6836456409990466148
+    second: Winslime_jump_14
+  - first:
+      213: 5583639470546425896
+    second: Winslime_jump_15
+  - first:
+      213: -674456968204325166
+    second: Winslime_jump_16
+  - first:
+      213: 2989642967301651242
+    second: Winslime_jump_17
+  - first:
+      213: 7241374208326752326
+    second: Winslime_jump_18
+  - first:
+      213: -2823340581715585833
+    second: Winslime_jump_19
+  - first:
+      213: 6066947964423212771
+    second: Winslime_jump_20
+  - first:
+      213: 7851686361265269144
+    second: Winslime_jump_21
+  - first:
+      213: 7915968711198733414
+    second: Winslime_jump_22
+  - first:
+      213: 7469480377031980074
+    second: Winslime_jump_23
+  - first:
+      213: 4446562926882066245
+    second: Winslime_jump_24
+  - first:
+      213: 4389377292054743843
+    second: Winslime_jump_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Winslime_jump_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 154
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade6e9dcbfb993800800000000000000
+      internalID: 592676331764739802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 154
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf851f8b0a805ad50800000000000000
+      internalID: 6747809103075170555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 154
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7c35145c1f736d80800000000000000
+      internalID: -8258617532020867971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 154
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d12944bd7b903a1d0800000000000000
+      internalID: -3340815813316406755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_4
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 154
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44d4a0ca81ca2e5c0800000000000000
+      internalID: -4187595481535591100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_5
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 154
+        width: 32
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa2d1b99820772080800000000000000
+      internalID: -9212271193083489617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_6
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 154
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 282de272c9d6a9990800000000000000
+      internalID: -7378464522053430654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_7
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 154
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c171ab855ba5e30800000000000000
+      internalID: 4493102970939317259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_8
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 106
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94affafe2d73e8850800000000000000
+      internalID: 6381099101134518857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 106
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 917d6003ec59ae240800000000000000
+      internalID: 4821831063855093529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 107
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb806079cb238290800000000000000
+      internalID: -7889413978049180698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_11
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 107
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b9d72fafd6ab4e0800000000000000
+      internalID: -1965137362816230629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_12
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 107
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748579b1e1479b800800000000000000
+      internalID: 628661295655639111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_13
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 107
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a171ae615a84bb860800000000000000
+      internalID: 7546705474480641818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_14
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 107
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46a8cef32e8ffde50800000000000000
+      internalID: 6836456409990466148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_15
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 107
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82815cbd3821d7d40800000000000000
+      internalID: 5583639470546425896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 59
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dee4e9f5f8d3a6f0800000000000000
+      internalID: -674456968204325166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_17
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 59
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b724f50785d7920800000000000000
+      internalID: 2989642967301651242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_18
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 59
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 648ddfcd9778e7460800000000000000
+      internalID: 7241374208326752326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_19
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 59
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4d5ea13ba71d8d0800000000000000
+      internalID: -2823340581715585833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_20
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 59
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee89329701223450800000000000000
+      internalID: 6066947964423212771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_21
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 59
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899eef2452bc6fc60800000000000000
+      internalID: 7851686361265269144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_22
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 59
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6647b1c2a9b2bdd60800000000000000
+      internalID: 7915968711198733414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_23
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 58
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a24fdb1f3dce8a760800000000000000
+      internalID: 7469480377031980074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_24
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 10
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f0a305c6d55bd30800000000000000
+      internalID: 4446562926882066245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Winslime_jump_25
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 10
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32bc61624633aec30800000000000000
+      internalID: 4389377292054743843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Winslime_jump_0: 592676331764739802
+      Winslime_jump_1: 6747809103075170555
+      Winslime_jump_10: -7889413978049180698
+      Winslime_jump_11: -1965137362816230629
+      Winslime_jump_12: 628661295655639111
+      Winslime_jump_13: 7546705474480641818
+      Winslime_jump_14: 6836456409990466148
+      Winslime_jump_15: 5583639470546425896
+      Winslime_jump_16: -674456968204325166
+      Winslime_jump_17: 2989642967301651242
+      Winslime_jump_18: 7241374208326752326
+      Winslime_jump_19: -2823340581715585833
+      Winslime_jump_2: -8258617532020867971
+      Winslime_jump_20: 6066947964423212771
+      Winslime_jump_21: 7851686361265269144
+      Winslime_jump_22: 7915968711198733414
+      Winslime_jump_23: 7469480377031980074
+      Winslime_jump_24: 4446562926882066245
+      Winslime_jump_25: 4389377292054743843
+      Winslime_jump_3: -3340815813316406755
+      Winslime_jump_4: -4187595481535591100
+      Winslime_jump_5: -9212271193083489617
+      Winslime_jump_6: -7378464522053430654
+      Winslime_jump_7: 4493102970939317259
+      Winslime_jump_8: 6381099101134518857
+      Winslime_jump_9: 4821831063855093529
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

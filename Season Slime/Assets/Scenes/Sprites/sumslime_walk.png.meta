@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 57b2b3573ef88e44a99d660795e6964b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5234499505739820810
+    second: sumslime_walk_0
+  - first:
+      213: 2171322724826374124
+    second: sumslime_walk_1
+  - first:
+      213: 3338785038308831732
+    second: sumslime_walk_2
+  - first:
+      213: -5705983290012145607
+    second: sumslime_walk_3
+  - first:
+      213: 6176024769816997987
+    second: sumslime_walk_4
+  - first:
+      213: -8008598214051283846
+    second: sumslime_walk_5
+  - first:
+      213: -3659102338755208511
+    second: sumslime_walk_6
+  - first:
+      213: -4954931530390419773
+    second: sumslime_walk_7
+  - first:
+      213: -8793990997923843718
+    second: sumslime_walk_8
+  - first:
+      213: 2339776025128121360
+    second: sumslime_walk_9
+  - first:
+      213: 8114516031597451817
+    second: sumslime_walk_10
+  - first:
+      213: -7078423874223396516
+    second: sumslime_walk_11
+  - first:
+      213: 8489568833998723959
+    second: sumslime_walk_12
+  - first:
+      213: -8975382116389913887
+    second: sumslime_walk_13
+  - first:
+      213: -1140404981247546138
+    second: sumslime_walk_14
+  - first:
+      213: 6970532031765195692
+    second: sumslime_walk_15
+  - first:
+      213: -3870741551919663886
+    second: sumslime_walk_16
+  - first:
+      213: 3830570769945645795
+    second: sumslime_walk_17
+  - first:
+      213: 3172509789462041447
+    second: sumslime_walk_18
+  - first:
+      213: 5936244699869885971
+    second: sumslime_walk_19
+  - first:
+      213: 4526537233238932134
+    second: sumslime_walk_20
+  - first:
+      213: -2252514020621453106
+    second: sumslime_walk_21
+  - first:
+      213: 3679931567678106337
+    second: sumslime_walk_22
+  - first:
+      213: -4379304941007677998
+    second: sumslime_walk_23
+  - first:
+      213: 8307270522902892674
+    second: sumslime_walk_24
+  - first:
+      213: 1862271897571671494
+    second: sumslime_walk_25
+  - first:
+      213: -8621601178681865807
+    second: sumslime_walk_26
+  - first:
+      213: -5002045641564440767
+    second: sumslime_walk_27
+  - first:
+      213: -2324267135060216191
+    second: sumslime_walk_28
+  - first:
+      213: -1551724167969377561
+    second: sumslime_walk_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sumslime_walk_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 154
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f09b6fde625b57b0800000000000000
+      internalID: -5234499505739820810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 154
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef520a9386122e10800000000000000
+      internalID: 2171322724826374124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 154
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f179cd7d4fb55e20800000000000000
+      internalID: 3338785038308831732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 154
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938e288ed6640d0b0800000000000000
+      internalID: -5705983290012145607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 154
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 360b4f06ec5a5b550800000000000000
+      internalID: 6176024769816997987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 154
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7c35ae0b5ebbd090800000000000000
+      internalID: -8008598214051283846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 154
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cad1b54fc1483dc0800000000000000
+      internalID: -3659102338755208511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 154
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c642b4860c8c3bb0800000000000000
+      internalID: -4954931530390419773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 106
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7134caa7c775f580800000000000000
+      internalID: -8793990997923843718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 106
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 014bcbfe5ed887020800000000000000
+      internalID: 2339776025128121360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 106
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92a1493965d8c9070800000000000000
+      internalID: 8114516031597451817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_11
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 106
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59254f4df264cd90800000000000000
+      internalID: -7078423874223396516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_12
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 106
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b98b6ffd101d570800000000000000
+      internalID: 8489568833998723959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 106
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea7f2dc489017380800000000000000
+      internalID: -8975382116389913887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_14
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 106
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec67a036b77c20f0800000000000000
+      internalID: -1140404981247546138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_15
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 106
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caba8d093fd4cb060800000000000000
+      internalID: 6970532031765195692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4fb7c011d584ac0800000000000000
+      internalID: -3870741551919663886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_17
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e2da9de1dbe82530800000000000000
+      internalID: 3830570769945645795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_18
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763955748d4070c20800000000000000
+      internalID: 3172509789462041447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3163a8b5a17c16250800000000000000
+      internalID: 5936244699869885971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_20
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 58
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa39c981ad71de30800000000000000
+      internalID: 4526537233238932134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_21
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 58
+        width: 39
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8754dbe667db0e0800000000000000
+      internalID: -2252514020621453106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_22
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 58
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ea2331834eb11330800000000000000
+      internalID: 3679931567678106337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_23
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 58
+        width: 38
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5df14db559933c0800000000000000
+      internalID: -4379304941007677998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_24
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28053bad68a594370800000000000000
+      internalID: 8307270522902892674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_25
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdb3f19c6e18d910800000000000000
+      internalID: 1862271897571671494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_26
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9049d386be95880800000000000000
+      internalID: -8621601178681865807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_27
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147b240bdf9259ab0800000000000000
+      internalID: -5002045641564440767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_28
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186fe9bea5b8ebfd0800000000000000
+      internalID: -2324267135060216191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sumslime_walk_29
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2fbc2371b277ae0800000000000000
+      internalID: -1551724167969377561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sumslime_walk_0: -5234499505739820810
+      sumslime_walk_1: 2171322724826374124
+      sumslime_walk_10: 8114516031597451817
+      sumslime_walk_11: -7078423874223396516
+      sumslime_walk_12: 8489568833998723959
+      sumslime_walk_13: -8975382116389913887
+      sumslime_walk_14: -1140404981247546138
+      sumslime_walk_15: 6970532031765195692
+      sumslime_walk_16: -3870741551919663886
+      sumslime_walk_17: 3830570769945645795
+      sumslime_walk_18: 3172509789462041447
+      sumslime_walk_19: 5936244699869885971
+      sumslime_walk_2: 3338785038308831732
+      sumslime_walk_20: 4526537233238932134
+      sumslime_walk_21: -2252514020621453106
+      sumslime_walk_22: 3679931567678106337
+      sumslime_walk_23: -4379304941007677998
+      sumslime_walk_24: 8307270522902892674
+      sumslime_walk_25: 1862271897571671494
+      sumslime_walk_26: -8621601178681865807
+      sumslime_walk_27: -5002045641564440767
+      sumslime_walk_28: -2324267135060216191
+      sumslime_walk_29: -1551724167969377561
+      sumslime_walk_3: -5705983290012145607
+      sumslime_walk_4: 6176024769816997987
+      sumslime_walk_5: -8008598214051283846
+      sumslime_walk_6: -3659102338755208511
+      sumslime_walk_7: -4954931530390419773
+      sumslime_walk_8: -8793990997923843718
+      sumslime_walk_9: 2339776025128121360
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

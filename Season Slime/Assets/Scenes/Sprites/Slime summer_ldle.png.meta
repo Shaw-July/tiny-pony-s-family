@@ -1,0 +1,559 @@
+fileFormatVersion: 2
+guid: ed132a898a758564b98753957203255f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2167523745309709242
+    second: Slime summer_ldle_0
+  - first:
+      213: 8736383480499655397
+    second: Slime summer_ldle_1
+  - first:
+      213: 4149656506535663953
+    second: Slime summer_ldle_2
+  - first:
+      213: 6266884814613861225
+    second: Slime summer_ldle_3
+  - first:
+      213: -4872982679945017171
+    second: Slime summer_ldle_4
+  - first:
+      213: 561932010170549095
+    second: Slime summer_ldle_5
+  - first:
+      213: -8488015635374816677
+    second: Slime summer_ldle_6
+  - first:
+      213: 1961238858242898851
+    second: Slime summer_ldle_7
+  - first:
+      213: -2497615552447123673
+    second: Slime summer_ldle_8
+  - first:
+      213: -3868552968867603436
+    second: Slime summer_ldle_9
+  - first:
+      213: 372632743637607310
+    second: Slime summer_ldle_10
+  - first:
+      213: -6530432272803104792
+    second: Slime summer_ldle_11
+  - first:
+      213: -1389414315333774280
+    second: Slime summer_ldle_12
+  - first:
+      213: -3282886965470459520
+    second: Slime summer_ldle_13
+  - first:
+      213: 9155334530449428810
+    second: Slime summer_ldle_14
+  - first:
+      213: 8852714026995472233
+    second: Slime summer_ldle_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Slime summer_ldle_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 58
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c279e33a86be1e0800000000000000
+      internalID: -2167523745309709242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 58
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2d5c8fc7edd3970800000000000000
+      internalID: 8736383480499655397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_2
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 58
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15952fb5b9a869930800000000000000
+      internalID: 4149656506535663953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_3
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 58
+        width: 37
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9635957198278f650800000000000000
+      internalID: 6266884814613861225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_4
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da80f3d1210bf5cb0800000000000000
+      internalID: -4872982679945017171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_5
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763032e9f226cc700800000000000000
+      internalID: 561932010170549095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52c58540c2843a80800000000000000
+      internalID: -8488015635374816677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 58
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abb249b958b73b10800000000000000
+      internalID: 1961238858242898851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_8
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 10
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fe5e253efa65dd0800000000000000
+      internalID: -2497615552447123673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_9
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 10
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c1ddf3293205ac0800000000000000
+      internalID: -3868552968867603436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_10
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 10
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83e23c818bdb2500800000000000000
+      internalID: 372632743637607310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_11
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 10
+        width: 39
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7f2d5927e3f55a0800000000000000
+      internalID: -6530432272803104792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_12
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83410b8aa0fc7bce0800000000000000
+      internalID: -1389414315333774280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0898f59c2b7d072d0800000000000000
+      internalID: -3282886965470459520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_14
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a415e479f384e0f70800000000000000
+      internalID: 9155334530449428810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime summer_ldle_15
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 10
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967de2df0882bda70800000000000000
+      internalID: 8852714026995472233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Slime summer_ldle_0: -2167523745309709242
+      Slime summer_ldle_1: 8736383480499655397
+      Slime summer_ldle_10: 372632743637607310
+      Slime summer_ldle_11: -6530432272803104792
+      Slime summer_ldle_12: -1389414315333774280
+      Slime summer_ldle_13: -3282886965470459520
+      Slime summer_ldle_14: 9155334530449428810
+      Slime summer_ldle_15: 8852714026995472233
+      Slime summer_ldle_2: 4149656506535663953
+      Slime summer_ldle_3: 6266884814613861225
+      Slime summer_ldle_4: -4872982679945017171
+      Slime summer_ldle_5: 561932010170549095
+      Slime summer_ldle_6: -8488015635374816677
+      Slime summer_ldle_7: 1961238858242898851
+      Slime summer_ldle_8: -2497615552447123673
+      Slime summer_ldle_9: -3868552968867603436
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
