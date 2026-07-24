@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeMode : MonoBehaviour
+public class AutumnSlimeMode : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float groundCheckDistance = 1f;
+    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float jumpForce = 2f;
+    [SerializeField] private float groundCheckDistance = 2f;
     [SerializeField] private LayerMask groundLayer;
 
     private float xInput;

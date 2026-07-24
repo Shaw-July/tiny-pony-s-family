@@ -1,10 +1,9 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeMode : MonoBehaviour
+public class WinterSlimeMode : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 8f;
+    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float jumpForce = 6f;
     [SerializeField] private float groundCheckDistance = 1f;
     [SerializeField] private LayerMask groundLayer;
 
@@ -26,7 +25,7 @@ public class SlimeMode : MonoBehaviour
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void SlimeJump()
+    private void SlimeJumpAndSmash()
     {
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
@@ -34,7 +33,17 @@ public class SlimeMode : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
         }
-
+        else if (isGrounded && Input.GetKeyDown(KeyCode.E))
+        {
+            rb.gravityScale = 2f;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce *2);
+            anim.SetTrigger("Smash");
+            Invoke(nameof(ResetGravity), 1.5f);
+        }
+    }
+    private void ResetGravity()
+    {
+        rb.gravityScale = 1f;
     }
 
     private void HandleAnim()
@@ -64,8 +73,8 @@ public class SlimeMode : MonoBehaviour
     void Update()
     {
         SlimeMove();
-        SlimeJump();
         HandleFlip();
         HandleAnim();
+        SlimeJumpAndSmash();
     }
 }

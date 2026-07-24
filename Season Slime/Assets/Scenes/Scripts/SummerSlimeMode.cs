@@ -1,18 +1,14 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeMode : MonoBehaviour
+public class SummerSlimeMode : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float jumpForce = 8f;
-    [SerializeField] private float groundCheckDistance = 1f;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private float moveSpeed = 4f;
+    [SerializeField] private float groundCheckDistance = 0.7f;
 
     private float xInput;
     private Rigidbody2D rb;
     private Animator anim;
     private bool facingRight;
-    private bool isGrounded;
 
     void Awake()
     {
@@ -26,15 +22,16 @@ public class SlimeMode : MonoBehaviour
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void SlimeJump()
+    private void HandleSlim()
     {
-        isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKey(KeyCode.E))
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            anim.SetTrigger("Jump");
+            anim.SetBool("PressE", true);
         }
-
+        else
+        {
+            anim.SetBool("PressE", false);
+        }
     }
 
     private void HandleAnim()
@@ -64,8 +61,8 @@ public class SlimeMode : MonoBehaviour
     void Update()
     {
         SlimeMove();
-        SlimeJump();
         HandleFlip();
         HandleAnim();
+        HandleSlim();
     }
 }
