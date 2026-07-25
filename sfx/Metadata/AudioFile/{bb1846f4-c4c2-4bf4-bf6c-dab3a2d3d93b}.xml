@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{bb1846f4-c4c2-4bf4-bf6c-dab3a2d3d93b}">
+		<property name="assetPath">
+			<value>Spring move2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.58086167800453514</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{0599a0d0-a2de-4729-80d9-ac512a06c589}</destination>
+		</relationship>
+	</object>
+</objects>

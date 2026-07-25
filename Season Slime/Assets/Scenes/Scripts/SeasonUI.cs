@@ -5,7 +5,8 @@ using TMPro;
 public class SeasonUI : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private SeasonManager seasonManager;
+    [SerializeField] private GameObject manager;
+    private SeasonManager seasonManager;
 
     [Header("UI Elements")]
     [SerializeField] private TextMeshProUGUI seasonNameText;
@@ -22,7 +23,7 @@ public class SeasonUI : MonoBehaviour
     private void Awake()
     {
         if (seasonManager == null)
-            seasonManager = FindObjectOfType<SeasonManager>();
+            seasonManager = manager.GetComponent<SeasonManager>();
     }
 
     private void OnEnable()
