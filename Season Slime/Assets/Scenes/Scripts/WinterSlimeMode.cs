@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WinterSlimeMode : MonoBehaviour
 {
+    public bool breakIce = false;
     [SerializeField] private float moveSpeed = 4f;
     [SerializeField] private float jumpForce = 6f;
     [SerializeField] private float groundCheckDistance = 1f;
@@ -12,6 +13,8 @@ public class WinterSlimeMode : MonoBehaviour
     private Animator anim;
     private bool facingRight;
     private bool isGrounded;
+    private bool isSmashing = false;
+    private bool hasLeftGround;
 
     void Awake()
     {
@@ -33,17 +36,29 @@ public class WinterSlimeMode : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
         }
-        else if (isGrounded && Input.GetKeyDown(KeyCode.E))
+        else if (isGrounded && Input.GetKeyDown(KeyCode.E) && !isSmashing)
         {
             rb.gravityScale = 2f;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce *2);
             anim.SetTrigger("Smash");
-            Invoke(nameof(ResetGravity), 1.5f);
+            isSmashing = true;
+            hasLeftGround = false;
         }
     }
-    private void ResetGravity()
+
+    private void CheckSmashLanding()
     {
-        rb.gravityScale = 1f;
+        if (!isSmashing) return;
+        if (!isGrounded)
+            hasLeftGround = true;
+
+        if (hasLeftGround && isGrounded)
+        {
+            rb.gravityScale = 1f;
+            breakIce = true;
+            isSmashing = false;
+            hasLeftGround = false;
+        }
     }
 
     private void HandleAnim()
@@ -76,5 +91,6 @@ public class WinterSlimeMode : MonoBehaviour
         HandleFlip();
         HandleAnim();
         SlimeJumpAndSmash();
+        CheckSmashLanding();
     }
 }

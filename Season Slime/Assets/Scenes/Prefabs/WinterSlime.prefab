@@ -193,9 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb2e24729fdf1f48a2d5f11c75bc0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WinterSlimeMode
+  breakIce: 0
   moveSpeed: 4
-  jumpForce: 6
-  groundCheckDistance: 1
+  jumpForce: 4
+  groundCheckDistance: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 64

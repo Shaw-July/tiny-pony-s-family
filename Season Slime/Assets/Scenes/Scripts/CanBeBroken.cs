@@ -2,53 +2,22 @@ using UnityEngine;
 
 public class CanBeBroken : MonoBehaviour
 {
-    [SerializeField] private GameObject hintUI;
-    [SerializeField] private float animationLength = 1.0f;
-    private bool isPlayerInRange = false;
-    private Animator anim;
-    private SlimeMode slimeMode;
-    private bool isPlayingAction = false;
+    private WinterSlimeMode winSlime;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            isPlayerInRange = true;
-            hintUI.SetActive(true);
-            anim = other.GetComponent<Animator>();
-            slimeMode = other.GetComponent<SlimeMode>();
+            winSlime = other.gameObject.GetComponent<WinterSlimeMode>();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void Update()
     {
-        if (other.CompareTag("Player"))
+        if (winSlime != null && winSlime.breakIce)
         {
-            isPlayerInRange = false;
-            hintUI.SetActive(false);
-        }
-    }
-
-    private void TriggerInteraction()
-    {
-        if (isPlayingAction) return;
-        anim.SetTrigger("Attack");
-        isPlayingAction = true;
-        slimeMode.enabled = false;
-        Invoke(nameof(ResetAction), animationLength);
-        Destroy(gameObject);
-    }
-
-    private void ResetAction()
-    {
-        isPlayingAction = false;
-        slimeMode.enabled = true;
-    }
-    void Update()
-    {
-        if (isPlayerInRange && Input.GetKeyDown(KeyCode.E))
-        {
-            TriggerInteraction();
+            Destroy(gameObject);
+            winSlime.breakIce = false;
         }
     }
 }
