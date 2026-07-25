@@ -3,7 +3,7 @@ using Unity.Cinemachine;
 
 public class SeasonChange : MonoBehaviour
 {
-    [SerializeField] private CinemachineCamera vcam;
+    //[SerializeField] private CinemachineCamera vcam;
     [SerializeField] private int season;
     [SerializeField] private GameObject SpringSlime;
     [SerializeField] private GameObject SummerSlime;
@@ -23,7 +23,7 @@ public class SeasonChange : MonoBehaviour
         if(targetPlayer != null)
             Destroy(targetPlayer);
 
-        vcam.Follow = newSlime.transform;
+        //vcam.Follow = newSlime.transform;
         gameObject.SetActive(false);
     }
 

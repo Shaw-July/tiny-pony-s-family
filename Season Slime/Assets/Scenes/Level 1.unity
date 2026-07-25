@@ -2200,12 +2200,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c330222fe7353847accac3ede24a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SeasonChange
-  vcam: {fileID: 0}
   season: 2
-  SpringSlime: {fileID: 0}
-  SummerSlime: {fileID: 0}
-  AutumnSlime: {fileID: 0}
-  WinterSlime: {fileID: 0}
+  SpringSlime: {fileID: 2836976986296629675, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+  SummerSlime: {fileID: 7811027079851453066, guid: 5e1edc9e7ca675e429971b1ccd5a620d, type: 3}
+  AutumnSlime: {fileID: 3836139349986554828, guid: 307230e2e9889604c8fa2a7ac24cfd98, type: 3}
+  WinterSlime: {fileID: 8573944264386624624, guid: 0110b95e4c678334ba8494d7e99656cd, type: 3}
 --- !u!1 &350604043
 GameObject:
   m_ObjectHideFlags: 0
@@ -2964,7 +2963,6 @@ GameObject:
   - component: {fileID: 440722582}
   - component: {fileID: 440722585}
   - component: {fileID: 440722584}
-  - component: {fileID: 440722583}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -2987,24 +2985,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1007503780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &440722583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440722581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c330222fe7353847accac3ede24a21e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SeasonChange
-  vcam: {fileID: 0}
-  season: 1
-  SpringSlime: {fileID: 0}
-  SummerSlime: {fileID: 0}
-  AutumnSlime: {fileID: 0}
-  WinterSlime: {fileID: 0}
 --- !u!61 &440722584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3245,6 +3225,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1059910623}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &457726455
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 534833087533520932, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2836976986296629675, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+      propertyPath: m_Name
+      value: SpringSlime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
 --- !u!1 &461603582
 GameObject:
   m_ObjectHideFlags: 0
@@ -4325,12 +4362,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c330222fe7353847accac3ede24a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SeasonChange
-  vcam: {fileID: 0}
   season: 3
-  SpringSlime: {fileID: 0}
-  SummerSlime: {fileID: 0}
-  AutumnSlime: {fileID: 0}
-  WinterSlime: {fileID: 0}
+  SpringSlime: {fileID: 2836976986296629675, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+  SummerSlime: {fileID: 7811027079851453066, guid: 5e1edc9e7ca675e429971b1ccd5a620d, type: 3}
+  AutumnSlime: {fileID: 3836139349986554828, guid: 307230e2e9889604c8fa2a7ac24cfd98, type: 3}
+  WinterSlime: {fileID: 8573944264386624624, guid: 0110b95e4c678334ba8494d7e99656cd, type: 3}
 --- !u!61 &594413119
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4745,7 +4781,6 @@ GameObject:
   - component: {fileID: 660630505}
   - component: {fileID: 660630507}
   - component: {fileID: 660630508}
-  - component: {fileID: 660630509}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4877,14 +4912,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioListener
   nonRigidbodyVelocity: 0
   attenuationObject: {fileID: 0}
---- !u!81 &660630509
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660630503}
-  m_Enabled: 1
 --- !u!1 &718922937
 GameObject:
   m_ObjectHideFlags: 0
@@ -11699,12 +11726,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c330222fe7353847accac3ede24a21e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SeasonChange
-  vcam: {fileID: 0}
-  season: 2
-  SpringSlime: {fileID: 0}
-  SummerSlime: {fileID: 0}
-  AutumnSlime: {fileID: 0}
-  WinterSlime: {fileID: 0}
+  season: 4
+  SpringSlime: {fileID: 2836976986296629675, guid: 0bd51321c23d78c409cafd1efa7d2185, type: 3}
+  SummerSlime: {fileID: 7811027079851453066, guid: 5e1edc9e7ca675e429971b1ccd5a620d, type: 3}
+  AutumnSlime: {fileID: 3836139349986554828, guid: 307230e2e9889604c8fa2a7ac24cfd98, type: 3}
+  WinterSlime: {fileID: 8573944264386624624, guid: 0110b95e4c678334ba8494d7e99656cd, type: 3}
 --- !u!61 &2059595546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12579,3 +12605,4 @@ SceneRoots:
   - {fileID: 1877052106}
   - {fileID: 1083224908}
   - {fileID: 1154127519}
+  - {fileID: 457726455}
