@@ -11,12 +11,11 @@ namespace FMODUnity
     {
         public EventReference EventReference;
 
-        [Obsolete("Use the EventReference field instead")]
+        [Obsolete("Use the EventReference field instead.")]
         public string Event = "";
 
         [FormerlySerializedAs("PlayEvent")]
         public EmitterGameEvent EventPlayTrigger = EmitterGameEvent.None;
-        [Obsolete("Use the EventPlayTrigger field instead")]
         public EmitterGameEvent PlayEvent
         {
             get { return EventPlayTrigger; }
@@ -24,7 +23,6 @@ namespace FMODUnity
         }
         [FormerlySerializedAs("StopEvent")]
         public EmitterGameEvent EventStopTrigger = EmitterGameEvent.None;
-        [Obsolete("Use the EventStopTrigger field instead")]
         public EmitterGameEvent StopEvent
         {
             get { return EventStopTrigger; }
@@ -93,19 +91,6 @@ namespace FMODUnity
             {
                 activeEmitters.Add(emitter);
             }
-            FMOD.Studio.PARAMETER_DESCRIPTION paramDesc;
-
-            emitter.eventDescription.getParameterDescriptionCount(out int paramCount);
-            for (int i = 0; i < paramCount; i++)
-            {
-                emitter.eventDescription.getParameterDescriptionByIndex(i, out paramDesc);
-
-                ParamRef cachedParam = new ParamRef();
-                cachedParam.ID = paramDesc.id;
-                cachedParam.Name = paramDesc.name;
-                cachedParam.Value = float.MaxValue; // float.MaxValue indicates that the value has never been set.
-                emitter.cachedParams.Add(cachedParam);
-            }
         }
 
         private static void DeregisterActiveEmitter(StudioEventEmitter emitter)
@@ -169,23 +154,23 @@ namespace FMODUnity
             if (!isQuitting)
             {
                 HandleGameEvent(EmitterGameEvent.ObjectDestroy);
-            }
 
-            if (instance.isValid())
-            {
-                RuntimeManager.DetachInstanceFromGameObject(instance);
-                if (eventDescription.isValid() && isOneshot)
+                if (instance.isValid())
                 {
-                    instance.release();
-                    instance.clearHandle();
+                    RuntimeManager.DetachInstanceFromGameObject(instance);
+                    if (eventDescription.isValid() && isOneshot)
+                    {
+                        instance.release();
+                        instance.clearHandle();
+                    }
                 }
-            }
 
-            DeregisterActiveEmitter(this);
+                DeregisterActiveEmitter(this);
 
-            if (Preload)
-            {
-                eventDescription.unloadSampleData();
+                if (Preload)
+                {
+                    eventDescription.unloadSampleData();
+                }
             }
         }
 
@@ -248,13 +233,9 @@ namespace FMODUnity
 
             IsActive = true;
 
-            if (is3D && Settings.Instance.StopEventsOutsideMaxDistance)
+            if (is3D && !isOneshot && Settings.Instance.StopEventsOutsideMaxDistance)
             {
-                if (!isOneshot)
-                {
-                    RegisterActiveEmitter(this);
-                }
-
+                RegisterActiveEmitter(this);
                 UpdatePlayingStatus(true);
             }
             else
@@ -318,15 +299,9 @@ namespace FMODUnity
                 instance.setParameterByID(param.ID, param.Value);
             }
 
-            if (Settings.Instance.StopEventsOutsideMaxDistance)
+            foreach (var cachedParam in cachedParams)
             {
-                foreach (var cachedParam in cachedParams)
-                {
-                    if (cachedParam.Value != float.MaxValue)
-                    {
-                        instance.setParameterByID(cachedParam.ID, cachedParam.Value);
-                    }
-                }
+                instance.setParameterByID(cachedParam.ID, cachedParam.Value);
             }
 
             if (is3D && OverrideAttenuation)
@@ -370,14 +345,21 @@ namespace FMODUnity
         {
             if (Settings.Instance.StopEventsOutsideMaxDistance && IsActive)
             {
-                foreach(ParamRef paramRef in cachedParams)
+                string findName = name;
+                ParamRef cachedParam = cachedParams.Find(x => x.Name == findName);
+
+                if (cachedParam == null)
                 {
-                    if (paramRef.Name.Equals(name))
-                    {
-                        paramRef.Value = value;
-                        break;
-                    }
+                    FMOD.Studio.PARAMETER_DESCRIPTION paramDesc;
+                    eventDescription.getParameterDescriptionByName(name, out paramDesc);
+
+                    cachedParam = new ParamRef();
+                    cachedParam.ID = paramDesc.id;
+                    cachedParam.Name = paramDesc.name;
+                    cachedParams.Add(cachedParam);
                 }
+
+                cachedParam.Value = value;
             }
 
             if (instance.isValid())
@@ -390,14 +372,21 @@ namespace FMODUnity
         {
             if (Settings.Instance.StopEventsOutsideMaxDistance && IsActive)
             {
-                foreach (ParamRef paramRef in cachedParams)
+                FMOD.Studio.PARAMETER_ID findId = id;
+                ParamRef cachedParam = cachedParams.Find(x => x.ID.Equals(findId));
+
+                if (cachedParam == null)
                 {
-                    if (paramRef.ID.Equals(id))
-                    {
-                        paramRef.Value = value;
-                        break;
-                    }
+                    FMOD.Studio.PARAMETER_DESCRIPTION paramDesc;
+                    eventDescription.getParameterDescriptionByID(id, out paramDesc);
+
+                    cachedParam = new ParamRef();
+                    cachedParam.ID = paramDesc.id;
+                    cachedParam.Name = paramDesc.name;
+                    cachedParams.Add(cachedParam);
                 }
+
+                cachedParam.Value = value;
             }
 
             if (instance.isValid())

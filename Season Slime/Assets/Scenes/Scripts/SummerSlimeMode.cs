@@ -3,7 +3,6 @@ using UnityEngine;
 public class SummerSlimeMode : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 4f;
-    [SerializeField] private float groundCheckDistance = 0.7f;
 
     private float xInput;
     private Rigidbody2D rb;
