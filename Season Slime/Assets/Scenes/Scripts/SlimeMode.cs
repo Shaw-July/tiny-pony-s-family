@@ -11,6 +11,7 @@ public class SlimeMode : MonoBehaviour
     private float xInput;
     private Rigidbody2D rb;
     private Animator anim;
+    private SpringSuperJumpVFX superJumpVFX;
     private bool facingRight;
     private bool isGrounded;
 
@@ -18,6 +19,7 @@ public class SlimeMode : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        superJumpVFX = GetComponent<SpringSuperJumpVFX>();
     }
 
     private void SlimeMove()
@@ -33,6 +35,7 @@ public class SlimeMode : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
+            superJumpVFX?.Play();
         }
 
     }

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7431655089018865729}
   - component: {fileID: 7922296382552603156}
   - component: {fileID: 1221682367685390438}
+  - component: {fileID: 8317865888906392790}
   m_Layer: 0
   m_Name: SummerSlime
   m_TagString: Player
@@ -225,3 +226,28 @@ MonoBehaviour:
   downwardTrailSpeed: 5
   trailLifetime: 0.14
   trailStartWidth: 0.32
+--- !u!114 &8317865888906392790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811027079851453066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a842b1fc80d74465b54bb0d4d359382a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeSquashStretch
+  verticalVelocityForFullStretch: 8
+  maximumAirStretch: 0.17
+  horizontalVelocityForFullStretch: 3
+  maximumRunStretch: 0.08
+  shapeSmoothTime: 0.07
+  jumpStretch: 0.18
+  jumpVelocityThreshold: 1.5
+  minimumLandingSpeed: 2
+  maximumLandingSpeed: 11
+  minimumLandingSquash: 0.12
+  maximumLandingSquash: 0.3
+  springStrength: 130
+  springDamping: 9

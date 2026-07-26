@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2672551963970156023}
   - component: {fileID: -127023028527364415}
   - component: {fileID: 5475000707315780557}
+  - component: {fileID: 4104182185483973401}
+  - component: {fileID: 6629034436244916832}
   m_Layer: 0
   m_Name: SpringSlime
   m_TagString: Player
@@ -230,3 +232,50 @@ MonoBehaviour:
   downwardTrailSpeed: 5
   trailLifetime: 0.14
   trailStartWidth: 0.38
+--- !u!114 &4104182185483973401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836976986296629675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a842b1fc80d74465b54bb0d4d359382a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeSquashStretch
+  verticalVelocityForFullStretch: 9
+  maximumAirStretch: 0.2
+  horizontalVelocityForFullStretch: 4
+  maximumRunStretch: 0.06
+  shapeSmoothTime: 0.05
+  jumpStretch: 0.24
+  jumpVelocityThreshold: 1.5
+  minimumLandingSpeed: 2
+  maximumLandingSpeed: 12
+  minimumLandingSquash: 0.1
+  maximumLandingSquash: 0.28
+  springStrength: 165
+  springDamping: 11
+--- !u!114 &6629034436244916832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836976986296629675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8930c8c696c4e288ffdd7ab59367639, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SpringSuperJumpVFX
+  petalMaterial: {fileID: 2100000, guid: 8ca2b2da91b7221419551c0af0b9606d, type: 2}
+  softParticleMaterial: {fileID: 2100000, guid: e9bf4c65030613c4e884e7ab66eaa93a, type: 2}
+  petalCount: 12
+  energyMoteCount: 10
+  horizontalSpread: 2.6
+  footVerticalOffset: 0.02
+  shockwaveColor: {r: 0.55, g: 1, b: 0.48, a: 0.85}
+  shockwaveDuration: 0.24
+  shockwaveWidth: 1.8
+  shockwaveHeight: 0.45

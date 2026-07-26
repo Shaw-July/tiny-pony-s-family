@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1824033221813657698}
   - component: {fileID: 7175887676613892340}
   - component: {fileID: 4248749141080640307}
+  - component: {fileID: 2149099155649475862}
   m_Layer: 0
   m_Name: AutumnSlime
   m_TagString: Player
@@ -230,3 +231,28 @@ MonoBehaviour:
   downwardTrailSpeed: 5
   trailLifetime: 0.16
   trailStartWidth: 0.5
+--- !u!114 &2149099155649475862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3836139349986554828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a842b1fc80d74465b54bb0d4d359382a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeSquashStretch
+  verticalVelocityForFullStretch: 8
+  maximumAirStretch: 0.12
+  horizontalVelocityForFullStretch: 3
+  maximumRunStretch: 0.05
+  shapeSmoothTime: 0.055
+  jumpStretch: 0.14
+  jumpVelocityThreshold: 1
+  minimumLandingSpeed: 1.5
+  maximumLandingSpeed: 9
+  minimumLandingSquash: 0.1
+  maximumLandingSquash: 0.22
+  springStrength: 190
+  springDamping: 15

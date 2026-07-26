@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7480503440705777464}
   - component: {fileID: 6981758767075065321}
   - component: {fileID: 4437794915423668432}
+  - component: {fileID: 7375911315074828360}
   m_Layer: 0
   m_Name: WinterSlime
   m_TagString: Player
@@ -232,3 +233,28 @@ MonoBehaviour:
   downwardTrailSpeed: 5
   trailLifetime: 0.16
   trailStartWidth: 0.4
+--- !u!114 &7375911315074828360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573944264386624624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a842b1fc80d74465b54bb0d4d359382a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SlimeSquashStretch
+  verticalVelocityForFullStretch: 9
+  maximumAirStretch: 0.14
+  horizontalVelocityForFullStretch: 4
+  maximumRunStretch: 0.045
+  shapeSmoothTime: 0.045
+  jumpStretch: 0.16
+  jumpVelocityThreshold: 1.5
+  minimumLandingSpeed: 2
+  maximumLandingSpeed: 12
+  minimumLandingSquash: 0.1
+  maximumLandingSquash: 0.3
+  springStrength: 220
+  springDamping: 17
