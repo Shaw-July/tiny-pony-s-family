@@ -10386,6 +10386,7 @@ GameObject:
   - component: {fileID: 1583077055}
   - component: {fileID: 1583077054}
   - component: {fileID: 1583077056}
+  - component: {fileID: 1583077057}
   m_Layer: 0
   m_Name: seasonmanager demo
   m_TagString: Untagged
@@ -10440,6 +10441,32 @@ MonoBehaviour:
   - {fileID: 7720063599127391726, guid: b962d735d100abc44b8fa1c8fa1119f6, type: 3}
   - {fileID: 6611411318484606473, guid: cfc6954e032b875408c6fe09b0afaa04, type: 3}
   camFollower: {fileID: 1583077056}
+--- !u!114 &1583077057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583077053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d8ac89e22d41269db85dd59bcbf5db, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::SeasonCameraParticles
+  seasonManager: {fileID: 1583077054}
+  targetCamera: {fileID: 0}
+  particlePrefabs:
+  - season: 0
+    prefab: {fileID: 213703386474343278, guid: b0b0f6655acb9324b9fba0b41cc7366f, type: 3}
+  - season: 1
+    prefab: {fileID: 4323367314507353856, guid: d968a3f9dc375df46b52369432645eaf, type: 3}
+  - season: 2
+    prefab: {fileID: 7252925218934847386, guid: a17c0c73f3b60cd488ea980fe361f5a7, type: 3}
+  - season: 3
+    prefab: {fileID: 5626448776992314522, guid: 702b962bee9919847a7474a5236467b8, type: 3}
+  distanceFromCamera: 10
+  screenPadding: {x: 4, y: 4}
+  sortingOrder: 20
 --- !u!4 &1583077055
 Transform:
   m_ObjectHideFlags: 0
