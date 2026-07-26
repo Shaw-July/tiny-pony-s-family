@@ -14,25 +14,47 @@ public class SlimeMode : MonoBehaviour
     private bool facingRight;
     private bool isGrounded;
 
+    private PlayerAudio playerAudio; //引用PlayerAudio组件
+    private bool wasGrounded;  //用于检测是否从空中落地
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<PlayerAudio>(); //获取PlayerAudio组件
+    
     }
 
     private void SlimeMove()
     {
         xInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
+
+        //在地面上且水平速度大于一个小阈值时按节奏随机播放行走音效
+        bool isWalking = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f;
+        playerAudio.HandleFootsteps(isWalking);
+        
+
     }
+
+    [SerializeField] private float minLandingSpeed = 0.5f; //最小落地速度阈值
 
     private void SlimeJump()
     {
+        float fallSpeed = rb.linearVelocity.y;
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
+
+        // 检测是否从空中落地
+        if (isGrounded && !wasGrounded && fallSpeed < -minLandingSpeed)
+        {
+            playerAudio.PlayLand(); //播放落地音效
+        }
+        wasGrounded = isGrounded; //更新wasGrounded状态
+
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
+            playerAudio.PlayJump(); //播放跳跃音效
         }
 
     }

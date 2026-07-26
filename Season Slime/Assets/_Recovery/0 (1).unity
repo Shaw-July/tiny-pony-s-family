@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 65177790}
   - component: {fileID: 65177789}
   - component: {fileID: 65177791}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: "\u6811\u5E72"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1226,10 +1226,6 @@ PrefabInstance:
     - target: {fileID: 1834947243609030906, guid: 04a008a7282fe164e983942260b8cc52, type: 3}
       propertyPath: m_Name
       value: stump
-      objectReference: {fileID: 0}
-    - target: {fileID: 1834947243609030906, guid: 04a008a7282fe164e983942260b8cc52, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3666,7 +3662,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5959,7 +5955,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -6555,9 +6551,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
   oneShotSource: {fileID: 720065037}
-  jumpClip: {fileID: 8300000, guid: 89c52dd5f5a26e5489aeb9523b94cb78, type: 3}
+  jumpClip: {fileID: 8300000, guid: 109744ae29eaa814f9cfa8e484089387, type: 3}
   transformClip: {fileID: 8300000, guid: b47f80cf448e5af4490f3f1492b16ac3, type: 3}
-  landClip: {fileID: 8300000, guid: 36f9f277242d3e94ab86eccfe5a502c6, type: 3}
+  landClip: {fileID: 8300000, guid: 89c52dd5f5a26e5489aeb9523b94cb78, type: 3}
   deathClip: {fileID: 8300000, guid: 6e8bccba976ee0d4f8902781a8822f5e, type: 3}
   footstepSource: {fileID: 720065038}
   footstepClips:
@@ -6565,7 +6561,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c4523951a9e063d4d9fca69f2fab2f15, type: 3}
   - {fileID: 8300000, guid: 99dd432f8a810454dbaa114fd8f82def, type: 3}
   - {fileID: 8300000, guid: 5a40238ef749cf845b4dd594db8b92f5, type: 3}
-  footstepInterval: 0.3
+  footstepInterval: 0.35
 --- !u!82 &720065037
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6579,7 +6575,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.55
+  m_Volume: 0.697
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -6676,7 +6672,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.439
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7376,10 +7372,6 @@ PrefabInstance:
     - target: {fileID: 1834947243609030906, guid: 04a008a7282fe164e983942260b8cc52, type: 3}
       propertyPath: m_Name
       value: stump (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1834947243609030906, guid: 04a008a7282fe164e983942260b8cc52, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10470,7 +10462,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
