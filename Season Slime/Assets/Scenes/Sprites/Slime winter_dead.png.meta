@@ -1,0 +1,491 @@
+fileFormatVersion: 2
+guid: 7f69d7226b6daaa4a8f9e83d7f032214
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1202852638703530597
+    second: Slime winter_dead_0
+  - first:
+      213: 8717593777896097775
+    second: Slime winter_dead_1
+  - first:
+      213: -5735697339524315246
+    second: Slime winter_dead_2
+  - first:
+      213: 2792945509723101681
+    second: Slime winter_dead_3
+  - first:
+      213: -5775976916239302710
+    second: Slime winter_dead_4
+  - first:
+      213: 5112754014286542512
+    second: Slime winter_dead_5
+  - first:
+      213: -607750303082003612
+    second: Slime winter_dead_6
+  - first:
+      213: -3094242306127807263
+    second: Slime winter_dead_7
+  - first:
+      213: 5716550965120307429
+    second: Slime winter_dead_8
+  - first:
+      213: 6526793693698269685
+    second: Slime winter_dead_9
+  - first:
+      213: -6437453006504574356
+    second: Slime winter_dead_10
+  - first:
+      213: -8855421986298345668
+    second: Slime winter_dead_11
+  - first:
+      213: 5986728791726450437
+    second: Slime winter_dead_12
+  - first:
+      213: 4229773156311370320
+    second: Slime winter_dead_13
+  - first:
+      213: 4704985584381069278
+    second: Slime winter_dead_14
+  - first:
+      213: 7668437168611820653
+    second: Slime winter_dead_15
+  - first:
+      213: 6651967676699727226
+    second: Slime winter_dead_16
+  - first:
+      213: 261106451405346697
+    second: Slime winter_dead_17
+  - first:
+      213: -5160023037614716644
+    second: Slime winter_dead_18
+  - first:
+      213: -5928833868132283195
+    second: Slime winter_dead_19
+  - first:
+      213: 3829019079594243009
+    second: Slime winter_dead_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Slime winter_dead_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 58
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562b0171a1461b010800000000000000
+      internalID: 1202852638703530597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 58
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe707ab6a5d1bf870800000000000000
+      internalID: 8717593777896097775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 58
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2970082a8a5b660b0800000000000000
+      internalID: -5735697339524315246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_3
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 58
+        width: 32
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f95118b42982c620800000000000000
+      internalID: 2792945509723101681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 58
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b6708dffa624f640800000000000000
+      internalID: 5112754014286542512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_7
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 58
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec344e340b0f05d0800000000000000
+      internalID: -3094242306127807263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_9
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 58
+        width: 32
+        height: 21
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f12523b844d39a50800000000000000
+      internalID: 6526793693698269685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_11
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 58
+        width: 32
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37c08a1f983b1580800000000000000
+      internalID: -8855421986298345668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_13
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 10
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a0c6e764c23ba30800000000000000
+      internalID: 4229773156311370320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 10
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d648289c9f2cb6a60800000000000000
+      internalID: 7668437168611820653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_17
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 10
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98714942fe2af9300800000000000000
+      internalID: 261106451405346697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime winter_dead_19
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 10
+        width: 32
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cc8bad520d88bda0800000000000000
+      internalID: -5928833868132283195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 20e5c7d4ac6346f48bed5db83cdd8be0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Slime winter_dead_0: 1202852638703530597
+      Slime winter_dead_1: 8717593777896097775
+      Slime winter_dead_10: -6437453006504574356
+      Slime winter_dead_11: -8855421986298345668
+      Slime winter_dead_12: 5986728791726450437
+      Slime winter_dead_13: 4229773156311370320
+      Slime winter_dead_14: 4704985584381069278
+      Slime winter_dead_15: 7668437168611820653
+      Slime winter_dead_16: 6651967676699727226
+      Slime winter_dead_17: 261106451405346697
+      Slime winter_dead_18: -5160023037614716644
+      Slime winter_dead_19: -5928833868132283195
+      Slime winter_dead_2: -5735697339524315246
+      Slime winter_dead_20: 3829019079594243009
+      Slime winter_dead_3: 2792945509723101681
+      Slime winter_dead_4: -5775976916239302710
+      Slime winter_dead_5: 5112754014286542512
+      Slime winter_dead_6: -607750303082003612
+      Slime winter_dead_7: -3094242306127807263
+      Slime winter_dead_8: 5716550965120307429
+      Slime winter_dead_9: 6526793693698269685
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
