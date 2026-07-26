@@ -5,11 +5,7 @@ public class EndScreenUI : MonoBehaviour
 {
     private void Awake()
     {
-        gameObject.SetActive(false);
-    }
-
-    public void Show()
-    {
+     
         gameObject.SetActive(true);
         Time.timeScale = 0f;
     }
@@ -17,7 +13,7 @@ public class EndScreenUI : MonoBehaviour
     public void RestartGame()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("Level 1");   // 换成你第一关的场景名
     }
 
     public void QuitGame()

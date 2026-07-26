@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2293006532050625938}
   - component: {fileID: 729139719226608819}
   - component: {fileID: 2942404479389376117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Winter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
