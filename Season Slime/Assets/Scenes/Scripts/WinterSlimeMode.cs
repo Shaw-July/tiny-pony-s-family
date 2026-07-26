@@ -7,6 +7,7 @@ public class WinterSlimeMode : MonoBehaviour
     [SerializeField] private float jumpForce = 6f;
     [SerializeField] private float groundCheckDistance = 1f;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField, Range(0.05f, 0.12f)] private float smashHitStopDuration = 0.08f;
 
     private float xInput;
     private Rigidbody2D rb;
@@ -56,6 +57,7 @@ public class WinterSlimeMode : MonoBehaviour
         {
             rb.gravityScale = 1f;
             breakIce = true;
+            GameFeelController.RequestHitStop(smashHitStopDuration);
             isSmashing = false;
             hasLeftGround = false;
         }

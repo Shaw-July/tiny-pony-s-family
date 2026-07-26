@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7532883376912534626}
   - component: {fileID: 2672551963970156023}
   - component: {fileID: -127023028527364415}
+  - component: {fileID: 5475000707315780557}
   m_Layer: 0
   m_Name: SpringSlime
   m_TagString: Player
@@ -199,3 +200,33 @@ CapsuleCollider2D:
   m_Offset: {x: -0.012787742, y: 0.65804356}
   m_Size: {x: 1.677881, y: 1.2107695}
   m_Direction: 1
+--- !u!114 &5475000707315780557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836976986296629675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1c98f0e203a4a499e9397337e6fbc01, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerImpactFeedback
+  minimumLandingSpeed: 3.5
+  maximumLandingSpeed: 13
+  minimumLandingAmplitude: 0.025
+  maximumLandingAmplitude: 0.16
+  minimumLandingDuration: 0.08
+  maximumLandingDuration: 0.18
+  minimumWallImpactSpeed: 2.5
+  maximumWallImpactSpeed: 8
+  minimumWallAmplitude: 0.025
+  maximumWallAmplitude: 0.12
+  wallImpactMultiplier: 1
+  wallImpactCooldown: 0.12
+  trailColor: {r: 0.48, g: 1, b: 0.63, a: 0.65}
+  horizontalTrailSpeed: 2.8
+  upwardTrailSpeed: 3.5
+  downwardTrailSpeed: 5
+  trailLifetime: 0.14
+  trailStartWidth: 0.38
