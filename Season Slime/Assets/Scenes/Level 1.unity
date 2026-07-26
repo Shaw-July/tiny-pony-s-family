@@ -5707,6 +5707,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73f94a5187a577d4aae12cb966a0151e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DeathLine
+  deathAudioSource: {fileID: 0}
+  deathClip: {fileID: 0}
 --- !u!61 &779303392
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12247,8 +12249,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0.21133333}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.15, y: 1.54}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12303,9 +12305,9 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: -7943467865753941811, guid: c11d5ec40409dbb4a952a5f4d68d6e24, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12324,7 +12326,7 @@ Transform:
   m_GameObject: {fileID: 2085263315}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.469, y: -4.056, z: 0}
+  m_LocalPosition: {x: 8.469, y: -4.02, z: 0}
   m_LocalScale: {x: 0.5441, y: 0.5499, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
