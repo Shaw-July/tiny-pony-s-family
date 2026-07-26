@@ -119,6 +119,148 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26775659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 26775662}
+  - component: {fileID: 26775661}
+  - component: {fileID: 26775660}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &26775660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26775659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e732a48f105b9ef46990107b52035b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!82 &26775661
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26775659}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 07a8ba3e01419c440af77c0b3892bf79, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.52
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &26775662
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26775659}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.26716, y: -0.89634, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &48113473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5908,7 +6050,7 @@ Transform:
   m_GameObject: {fileID: 799139310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.95, y: 7.1, z: -10}
+  m_LocalPosition: {x: 29.57, y: 14.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10447,7 +10589,7 @@ Transform:
   m_GameObject: {fileID: 1523933434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -0.05, z: 0}
+  m_LocalPosition: {x: 9.22, y: 4.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10879,32 +11021,6 @@ MonoBehaviour:
   - {fileID: 7720063599127391726, guid: b962d735d100abc44b8fa1c8fa1119f6, type: 3}
   - {fileID: 6611411318484606473, guid: cfc6954e032b875408c6fe09b0afaa04, type: 3}
   camFollower: {fileID: 1583077056}
---- !u!114 &1583077057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583077053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d8ac89e22d41269db85dd59bcbf5db, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::SeasonCameraParticles
-  seasonManager: {fileID: 1583077054}
-  targetCamera: {fileID: 0}
-  particlePrefabs:
-  - season: 0
-    prefab: {fileID: 213703386474343278, guid: b0b0f6655acb9324b9fba0b41cc7366f, type: 3}
-  - season: 1
-    prefab: {fileID: 4323367314507353856, guid: d968a3f9dc375df46b52369432645eaf, type: 3}
-  - season: 2
-    prefab: {fileID: 7252925218934847386, guid: a17c0c73f3b60cd488ea980fe361f5a7, type: 3}
-  - season: 3
-    prefab: {fileID: 5626448776992314522, guid: 702b962bee9919847a7474a5236467b8, type: 3}
-  distanceFromCamera: 10
-  screenPadding: {x: 4, y: 4}
-  sortingOrder: 20
 --- !u!4 &1583077055
 Transform:
   m_ObjectHideFlags: 0
@@ -10933,6 +11049,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   vcam: {fileID: 1935670937}
+--- !u!114 &1583077057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583077053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85d8ac89e22d41269db85dd59bcbf5db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SeasonCameraParticles
+  seasonManager: {fileID: 1583077054}
+  targetCamera: {fileID: 0}
+  particlePrefabs:
+  - season: 0
+    prefab: {fileID: 213703386474343278, guid: b0b0f6655acb9324b9fba0b41cc7366f, type: 3}
+  - season: 1
+    prefab: {fileID: 4323367314507353856, guid: d968a3f9dc375df46b52369432645eaf, type: 3}
+  - season: 2
+    prefab: {fileID: 7252925218934847386, guid: a17c0c73f3b60cd488ea980fe361f5a7, type: 3}
+  - season: 3
+    prefab: {fileID: 5626448776992314522, guid: 702b962bee9919847a7474a5236467b8, type: 3}
+  distanceFromCamera: 10
+  screenPadding: {x: 4, y: 4}
+  sortingOrder: 20
 --- !u!1 &1595876824
 GameObject:
   m_ObjectHideFlags: 0
@@ -15037,3 +15179,4 @@ SceneRoots:
   - {fileID: 1515081175}
   - {fileID: 1401629029}
   - {fileID: 229888284}
+  - {fileID: 26775662}
