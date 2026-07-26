@@ -7,7 +7,6 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip jumpClip;
     public AudioClip transformClip;
     public AudioClip landClip;
-    public AudioClip deathClip;
 
     [Header("行走音效(勾 Loop 的那个)")]
     public AudioSource footstepSource;  //不用勾loop
@@ -42,5 +41,4 @@ public class PlayerAudio : MonoBehaviour
     public void PlayJump() { oneShotSource.PlayOneShot(jumpClip); }
     public void PlayTransform() { oneShotSource.PlayOneShot(transformClip); }
     public void PlayLand() { oneShotSource.PlayOneShot(landClip); }
-    public void PlayDeath() { oneShotSource.PlayOneShot(deathClip); }
 }
