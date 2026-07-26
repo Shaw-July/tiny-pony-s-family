@@ -15,14 +15,14 @@ public class SlimeMode : MonoBehaviour
     private bool facingRight;
     private bool isGrounded;
 
-    private PlayerAudio playerAudio; //����PlayerAudio���
-    private bool wasGrounded;  //���ڼ���Ƿ�ӿ������
+    private PlayerAudio playerAudio;
+    private bool wasGrounded;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
 
-        playerAudio = GetComponent<PlayerAudio>(); //��ȡPlayerAudio���
+        playerAudio = GetComponent<PlayerAudio>();
 
         superJumpVFX = GetComponent<SpringSuperJumpVFX>();
 
@@ -33,14 +33,13 @@ public class SlimeMode : MonoBehaviour
         xInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
 
-        //�ڵ�������ˮƽ�ٶȴ���һ��С��ֵʱ�������������������Ч
         bool isWalking = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f;
         playerAudio.HandleFootsteps(isWalking);
         
 
     }
 
-    [SerializeField] private float minLandingSpeed = 0.5f; //��С����ٶ���ֵ
+    [SerializeField] private float minLandingSpeed = 0.5f;
 
     private void SlimeJump()
     {
@@ -50,16 +49,16 @@ public class SlimeMode : MonoBehaviour
         // ����Ƿ�ӿ������
         if (isGrounded && !wasGrounded && fallSpeed < -minLandingSpeed)
         {
-            playerAudio.PlayLand(); //���������Ч
+            playerAudio.PlayLand();
         }
-        wasGrounded = isGrounded; //����wasGrounded״̬
+        wasGrounded = isGrounded;
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
 
-            playerAudio.PlayJump(); //������Ծ��Ч
+            playerAudio.PlayJump();
             superJumpVFX?.Play();
 
         }
