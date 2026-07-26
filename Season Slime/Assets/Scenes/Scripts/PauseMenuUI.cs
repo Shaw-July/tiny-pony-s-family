@@ -25,10 +25,12 @@ public class PauseMenuUI : MonoBehaviour
         if (isPaused)
         {
             return;
+            print("Game is already paused.");
         }
 
         isPaused = true;
         pausePanel.SetActive(true);
+        print("panel is shown and game is paused.");
 
         // 停止所有依赖 Time.deltaTime 的游戏逻辑
         Time.timeScale = 0f;
