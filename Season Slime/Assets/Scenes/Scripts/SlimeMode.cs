@@ -11,17 +11,21 @@ public class SlimeMode : MonoBehaviour
     private float xInput;
     private Rigidbody2D rb;
     private Animator anim;
+    private SpringSuperJumpVFX superJumpVFX;
     private bool facingRight;
     private bool isGrounded;
 
-    private PlayerAudio playerAudio; //ÒýÓÃPlayerAudio×é¼þ
-    private bool wasGrounded;  //ÓÃÓÚ¼ì²âÊÇ·ñ´Ó¿ÕÖÐÂäµØ
+    private PlayerAudio playerAudio; //ï¿½ï¿½ï¿½ï¿½PlayerAudioï¿½ï¿½ï¿½
+    private bool wasGrounded;  //ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½Ç·ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        playerAudio = GetComponent<PlayerAudio>(); //»ñÈ¡PlayerAudio×é¼þ
-    
+
+        playerAudio = GetComponent<PlayerAudio>(); //ï¿½ï¿½È¡PlayerAudioï¿½ï¿½ï¿½
+
+        superJumpVFX = GetComponent<SpringSuperJumpVFX>();
+
     }
 
     private void SlimeMove()
@@ -29,32 +33,35 @@ public class SlimeMode : MonoBehaviour
         xInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
 
-        //ÔÚµØÃæÉÏÇÒË®Æ½ËÙ¶È´óÓÚÒ»¸öÐ¡ãÐÖµÊ±°´½Ú×àËæ»ú²¥·ÅÐÐ×ßÒôÐ§
+        //ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë®Æ½ï¿½Ù¶È´ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ð¡ï¿½ï¿½ÖµÊ±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
         bool isWalking = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f;
         playerAudio.HandleFootsteps(isWalking);
         
 
     }
 
-    [SerializeField] private float minLandingSpeed = 0.5f; //×îÐ¡ÂäµØËÙ¶ÈãÐÖµ
+    [SerializeField] private float minLandingSpeed = 0.5f; //ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½Öµ
 
     private void SlimeJump()
     {
         float fallSpeed = rb.linearVelocity.y;
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
 
-        // ¼ì²âÊÇ·ñ´Ó¿ÕÖÐÂäµØ
+        // ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ó¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         if (isGrounded && !wasGrounded && fallSpeed < -minLandingSpeed)
         {
-            playerAudio.PlayLand(); //²¥·ÅÂäµØÒôÐ§
+            playerAudio.PlayLand(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§
         }
-        wasGrounded = isGrounded; //¸üÐÂwasGrounded×´Ì¬
+        wasGrounded = isGrounded; //ï¿½ï¿½ï¿½ï¿½wasGrounded×´Ì¬
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
-            playerAudio.PlayJump(); //²¥·ÅÌøÔ¾ÒôÐ§
+
+            playerAudio.PlayJump(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¾ï¿½ï¿½Ð§
+            superJumpVFX?.Play();
+
         }
 
     }

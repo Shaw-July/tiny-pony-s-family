@@ -223,12 +223,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -7282886668606283007, guid: bfdf55e425ed4e949aecbf04dd4d2819, type: 3}
+  m_Sprite: {fileID: 8865208874398379130, guid: 3df105f2eb8483e4b833840788146cb3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.21}
+  m_Size: {x: 2, y: 1.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -1074,7 +1074,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 1.3125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1388649143
 Transform:
@@ -1208,8 +1208,6 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
-  summerSlime: {fileID: 9116523013781877449, guid: 399f4896973753d40b065622f487bd97, type: 3}
-  squashedSlime: {fileID: -5205219859020809779, guid: 399f4896973753d40b065622f487bd97, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
