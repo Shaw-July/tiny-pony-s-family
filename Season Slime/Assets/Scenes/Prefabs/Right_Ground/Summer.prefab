@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7054027726364612275}
   - component: {fileID: 6314547043910963381}
   - component: {fileID: 6587193487115346371}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Summer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
