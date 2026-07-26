@@ -119,7 +119,9 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+
 --- !u!1001 &42778010
+
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -6232,7 +6234,9 @@ Transform:
   m_GameObject: {fileID: 799139310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+
   m_LocalPosition: {x: 36.3, y: 7.1, z: -10}
+
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10171,7 +10175,7 @@ Transform:
   m_GameObject: {fileID: 1523933434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2, y: -0.05, z: 0}
+  m_LocalPosition: {x: 9.22, y: 4.58, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10441,32 +10445,6 @@ MonoBehaviour:
   - {fileID: 7720063599127391726, guid: b962d735d100abc44b8fa1c8fa1119f6, type: 3}
   - {fileID: 6611411318484606473, guid: cfc6954e032b875408c6fe09b0afaa04, type: 3}
   camFollower: {fileID: 1583077056}
---- !u!114 &1583077057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583077053}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d8ac89e22d41269db85dd59bcbf5db, type: 3}
-  m_Name:
-  m_EditorClassIdentifier: Assembly-CSharp::SeasonCameraParticles
-  seasonManager: {fileID: 1583077054}
-  targetCamera: {fileID: 0}
-  particlePrefabs:
-  - season: 0
-    prefab: {fileID: 213703386474343278, guid: b0b0f6655acb9324b9fba0b41cc7366f, type: 3}
-  - season: 1
-    prefab: {fileID: 4323367314507353856, guid: d968a3f9dc375df46b52369432645eaf, type: 3}
-  - season: 2
-    prefab: {fileID: 7252925218934847386, guid: a17c0c73f3b60cd488ea980fe361f5a7, type: 3}
-  - season: 3
-    prefab: {fileID: 5626448776992314522, guid: 702b962bee9919847a7474a5236467b8, type: 3}
-  distanceFromCamera: 10
-  screenPadding: {x: 4, y: 4}
-  sortingOrder: 20
 --- !u!4 &1583077055
 Transform:
   m_ObjectHideFlags: 0
@@ -10495,6 +10473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   vcam: {fileID: 1935670937}
+
 --- !u!1001 &1584414657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10557,6 +10536,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 361867163088191079, guid: c2e08edd2c6e1864eb0fe66364eb8fbf, type: 3}
   m_PrefabInstance: {fileID: 1584414657}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1 &1595876824
 GameObject:
   m_ObjectHideFlags: 0
@@ -15008,5 +14988,7 @@ SceneRoots:
   - {fileID: 1515081175}
   - {fileID: 1401629029}
   - {fileID: 229888284}
+
   - {fileID: 1753707493}
   - {fileID: 273061655}
+
