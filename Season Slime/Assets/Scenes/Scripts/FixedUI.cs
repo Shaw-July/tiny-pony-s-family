@@ -70,7 +70,39 @@ public class FixedUI : MonoBehaviour
                 seasonBackground.sprite = bg;
         }
     }
+    public void SetSeason(int season)   // season: 1春 2夏 3秋 4冬
+    {
+        Debug.Log("FixedUI SetSeason 被调用了，season = " + season);
 
+        if (seasonNumberText != null)
+            seasonNumberText.text = season.ToString();
+
+        // 新增:更新名字
+        if (seasonNameText != null)
+        {
+            seasonNameText.text = season switch
+            {
+                1 => "Spring",
+                2 => "Summer",
+                3 => "Autumn",
+                4 => "Winter",
+                _ => ""
+            };
+        }
+
+        if (seasonBackground != null)
+        {
+            Sprite bg = season switch
+            {
+                1 => springBg,
+                2 => summerBg,
+                3 => autumnBg,
+                4 => winterBg,
+                _ => null
+            };
+            if (bg != null) seasonBackground.sprite = bg;
+        }
+    }
     // 根据季节名返回编号（改成匹配你实际的 displayName）
     private int GetSeasonNumber(string name)
     {
