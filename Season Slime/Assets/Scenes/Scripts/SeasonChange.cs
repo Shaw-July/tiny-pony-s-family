@@ -9,7 +9,7 @@ public class SeasonChange : MonoBehaviour
     [SerializeField] private GameObject SummerSlime;
     [SerializeField] private GameObject AutumnSlime;
     [SerializeField] private GameObject WinterSlime;
-    [SerializeField] private FixedUI fixedUI;   // Inspector мохК UI
+    [SerializeField] private FixedUI fixedUI;    
 
     private Animator anim;
     private GameObject targetPlayer;
