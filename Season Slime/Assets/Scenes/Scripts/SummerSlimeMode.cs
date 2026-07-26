@@ -10,16 +10,24 @@ public class SummerSlimeMode : MonoBehaviour
     private Animator anim;
     private bool facingRight;
 
+    private PlayerAudio playerAudio; //引用PlayerAudio组件
+
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<PlayerAudio>(); //获取PlayerAudio组件
     }
 
     private void SlimeMove()
     {
         xInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
+
+        //在地面上且水平速度大于一个小阈值时按节奏随机播放行走音效
+        bool isWalking = Mathf.Abs(rb.linearVelocity.x) > 0.01f;
+        playerAudio.HandleFootsteps(isWalking);
     }
 
     private void HandleSlim()

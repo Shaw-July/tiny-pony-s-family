@@ -8,6 +8,7 @@ public class WinterSlimeMode : MonoBehaviour
     [SerializeField] private float jumpForce = 6f;
     [SerializeField] private float groundCheckDistance = 1f;
     [SerializeField] private LayerMask groundLayer;
+    [SerializeField, Range(0.05f, 0.12f)] private float smashHitStopDuration = 0.08f;
 
     private float xInput;
     private Rigidbody2D rb;
@@ -17,16 +18,23 @@ public class WinterSlimeMode : MonoBehaviour
     private bool isSmashing = false;
     private bool hasLeftGround;
 
+    private PlayerAudio playerAudio; //引用PlayerAudio组件
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        playerAudio = GetComponent<PlayerAudio>(); //获取PlayerAudio组件
     }
 
     private void SlimeMove()
     {
         xInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
+        
+        //在地面上且水平速度大于一个小阈值时按节奏随机播放行走音效
+        bool isWalking = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f;
+        playerAudio.HandleFootsteps(isWalking);
     }
 
     private void SlimeJumpAndSmash()
@@ -36,6 +44,7 @@ public class WinterSlimeMode : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             anim.SetTrigger("Jump");
+            playerAudio.PlayJump(); //播放跳跃音效
         }
         else if (isGrounded && Input.GetKeyDown(KeyCode.E) && !isSmashing)
         {
@@ -57,6 +66,7 @@ public class WinterSlimeMode : MonoBehaviour
         {
             rb.gravityScale = 1f;
             breakIce = true;
+            GameFeelController.RequestHitStop(smashHitStopDuration);
             isSmashing = false;
             hasLeftGround = false;
         }
