@@ -34,6 +34,7 @@ public class PauseMenuUI : MonoBehaviour
 
         // 停止所有依赖 Time.deltaTime 的游戏逻辑
         Time.timeScale = 0f;
+        AudioListener.pause = true;
     }
 
     public void ContinueGame()
@@ -48,6 +49,7 @@ public class PauseMenuUI : MonoBehaviour
 
         // 恢复游戏时间
         Time.timeScale = 1f;
+        AudioListener.pause = false;
     }
 
     public void RestartGame()
