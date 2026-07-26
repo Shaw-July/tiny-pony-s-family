@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinterSlimeMode : MonoBehaviour
 {
@@ -85,6 +86,12 @@ public class WinterSlimeMode : MonoBehaviour
         facingRight = !facingRight;
     }
 
+    private void Restart()
+    {
+        SceneManager.LoadScene(2);
+        SeasonManager.CycleCount = 0;
+    }
+
     void Update()
     {
         SlimeMove();
@@ -92,5 +99,11 @@ public class WinterSlimeMode : MonoBehaviour
         HandleAnim();
         SlimeJumpAndSmash();
         CheckSmashLanding();
+
+        if(SeasonManager.CycleCount >= 2)
+        {
+            anim.SetTrigger("Dead");
+            Invoke(nameof(Restart), 1f);
+        }
     }
 }

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SummerSlimeMode : MonoBehaviour
 {
@@ -55,6 +56,20 @@ public class SummerSlimeMode : MonoBehaviour
     {
         transform.Rotate(0, 180, 0);
         facingRight = !facingRight;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Trap"))
+        {
+            anim.SetTrigger("Dead");
+            Invoke(nameof(Restart), 1f);
+        }
+    }
+
+    private void Restart()
+    {
+        SceneManager.LoadScene(1);
     }
 
     void Update()

@@ -1,16 +1,11 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SeasonManager : MonoBehaviour
 {
-    public enum Season
-    {
-        Spring,
-        Summer,
-        Autumn,
-        Winter
-    }
+    public enum Season { Spring, Summer, Autumn, Winter }
 
     [Serializable]
     public class SeasonSetting
@@ -35,68 +30,96 @@ public class SeasonManager : MonoBehaviour
     [SerializeField] private bool autoStart = true;
     [SerializeField] private bool loop = true;
     [SerializeField] private int startIndex = 0;
-    [Tooltip("颜色过渡时间，0 为瞬间切换")]
     [SerializeField] private float blendDuration = 2f;
 
-    [Header("Optional Targets")]
+    [Header("Color Targets")]
     [SerializeField] private SpriteRenderer[] tintTargets;
-    [SerializeField] private Camera backgroundCamera;
 
-    // 事件：切换到新季节时触发
+    [Header("Ground Tiles")]
+    [SerializeField] private Transform groundParent;          // 所有地面块位置
+    [SerializeField] private GameObject[] seasonGroundPrefabs;     // 顺序与 seasons 一致
+    [SerializeField] private float groundAnimationDuration = 0.1f; // 消失动画时长
+
+    [Header("Slime Prefabs")]
+    [SerializeField] private GameObject[] slimePrefabs; // 史莱姆预制体
+
     public event Action<SeasonSetting> OnSeasonChanged;
-    // 事件：颜色每帧变化时触发（含过渡过程）
     public event Action<Color> OnColorChanged;
 
     private int currentIndex;
-    private Coroutine loopCoroutine;
-    private Coroutine blendCoroutine;
+    private Coroutine cycleCoroutine;
     private Color currentColor;
+    private List<GameObject> currentGroundTiles = new List<GameObject>();
+    private bool isCycleRunning;
 
-    public SeasonSetting CurrentSeason =>
-        (seasons != null && seasons.Length > 0) ? seasons[currentIndex] : null;
+    public SeasonSetting CurrentSeason => seasons[currentIndex];
     public Color CurrentColor => currentColor;
     public float TimeRemaining { get; private set; }
+    public static int CycleCount = 0;
 
+    private Vector3[] spawnPositions;
+    private Quaternion[] spawnRotations;
+
+    void Awake()
+    {
+        int childCount = groundParent.childCount;
+        spawnPositions = new Vector3[childCount];
+        spawnRotations = new Quaternion[childCount];
+        currentGroundTiles.Clear();
+
+        for (int i = 0; i < childCount; i++)
+        {
+            Transform child = groundParent.GetChild(i);
+            spawnPositions[i] = child.position;
+            spawnRotations[i] = child.rotation;
+            currentGroundTiles.Add(child.gameObject); // 直接将现有物体作为初始地面块
+        }
+    }
     private void Start()
     {
-        if (seasons == null || seasons.Length == 0)
-        {
-            Debug.LogError("[SeasonManager] 季节列表为空。");
-            enabled = false;
-            return;
-        }
-
         currentIndex = Mathf.Clamp(startIndex, 0, seasons.Length - 1);
         currentColor = seasons[currentIndex].color;
         ApplyColor(currentColor);
 
-        if (autoStart)
-            StartCycle();
+        if (autoStart) StartCycle();
     }
 
+    private void ClearGroundTiles()
+    {
+        foreach (var tile in currentGroundTiles)
+            if (tile != null) Destroy(tile);
+        currentGroundTiles.Clear();
+    }
+
+    // ---------- 循环控制 ----------
     public void StartCycle()
     {
         StopCycle();
-        loopCoroutine = StartCoroutine(SeasonLoop());
+        isCycleRunning = true;
+        cycleCoroutine = StartCoroutine(SeasonCycle());
     }
 
     public void StopCycle()
     {
-        if (loopCoroutine != null)
+        if (cycleCoroutine != null)
         {
-            StopCoroutine(loopCoroutine);
-            loopCoroutine = null;
+            StopCoroutine(cycleCoroutine);
+            cycleCoroutine = null;
         }
+        isCycleRunning = false;
     }
 
-    private IEnumerator SeasonLoop()
+    // ---------- 核心循环 ----------
+    private IEnumerator SeasonCycle()
     {
         while (true)
         {
-            EnterSeason(currentIndex);
+            // 1. 进入当前季节（颜色混合）
+            yield return StartCoroutine(ApplySeasonWithBlend(currentIndex));
 
-            float duration = seasons[currentIndex].duration;
-            TimeRemaining = duration;
+            // 2. 等待剩余持续时间（混合已耗去 blendDuration）
+            float remaining = Mathf.Max(0, seasons[currentIndex].duration - blendDuration);
+            TimeRemaining = remaining;  // 赋值
 
             while (TimeRemaining > 0f)
             {
@@ -105,46 +128,37 @@ public class SeasonManager : MonoBehaviour
             }
             TimeRemaining = 0f;
 
+            // 3. 计算下一季节索引
             int next = currentIndex + 1;
             if (next >= seasons.Length)
             {
-                if (!loop)
-                    yield break;
+                if (!loop) yield break;
                 next = 0;
+                CycleCount++;
             }
+
+            // 4. ★ 替换地面块（播放消失动画，等待完成后生成新块）
+            yield return StartCoroutine(ReplaceGroundTiles(next));
+
+            // 5. 更新索引，进入下一季节（下次循环会执行颜色混合）
             currentIndex = next;
         }
     }
 
-    private void EnterSeason(int index)
+    // ---------- 颜色混合协程 ----------
+    private IEnumerator ApplySeasonWithBlend(int index)
     {
         SeasonSetting setting = seasons[index];
         OnSeasonChanged?.Invoke(setting);
 
-        if (blendCoroutine != null)
-            StopCoroutine(blendCoroutine);
-
-        if (blendDuration <= 0f)
-        {
-            currentColor = setting.color;
-            ApplyColor(currentColor);
-            OnColorChanged?.Invoke(currentColor);
-        }
-        else
-        {
-            blendCoroutine = StartCoroutine(BlendColor(setting.color, blendDuration));
-        }
-    }
-
-    private IEnumerator BlendColor(Color target, float duration)
-    {
         Color from = currentColor;
-        float t = 0f;
+        Color target = setting.color;
+        float elapsed = 0f;
 
-        while (t < duration)
+        while (elapsed < blendDuration)
         {
-            t += Time.deltaTime;
-            currentColor = Color.Lerp(from, target, t / duration);
+            elapsed += Time.deltaTime;
+            currentColor = Color.Lerp(from, target, elapsed / blendDuration);
             ApplyColor(currentColor);
             OnColorChanged?.Invoke(currentColor);
             yield return null;
@@ -153,56 +167,78 @@ public class SeasonManager : MonoBehaviour
         currentColor = target;
         ApplyColor(currentColor);
         OnColorChanged?.Invoke(currentColor);
-        blendCoroutine = null;
     }
 
-    private void ApplyColor(Color color)
+    // ---------- 地面块替换协程（含消失动画） ----------
+    private IEnumerator ReplaceGroundTiles(int newSeasonIndex)
     {
-        if (tintTargets != null)
+        foreach (var tile in currentGroundTiles)
         {
-            foreach (var sr in tintTargets)
-            {
-                if (sr != null)
-                    sr.color = color;
-            }
+            Animator anim = tile.GetComponent<Animator>();
+            anim.SetTrigger("ChangeState");
         }
 
-        if (backgroundCamera != null)
-            backgroundCamera.backgroundColor = color;
+        GameObject targetPlayer = GameObject.FindGameObjectWithTag("Player");
+        Animator slimeAnim = targetPlayer.GetComponent<Animator>();
+        if(SeasonManager.CycleCount < 2)
+            slimeAnim.SetBool("ChangeState", true);
+        Vector3 playerPos = targetPlayer.transform.position;
+
+        yield return new WaitForSeconds(groundAnimationDuration);
+
+        // 2. 销毁旧块
+        ClearGroundTiles();
+
+        if (targetPlayer != null)
+            Destroy(targetPlayer);
+
+        // 3. 生成新块（使用新季节的预制体）
+        GameObject prefab = seasonGroundPrefabs[newSeasonIndex];
+        for (int i = 0; i < spawnPositions.Length; i++)
+        {
+            GameObject newTile = Instantiate(prefab, spawnPositions[i], spawnRotations[i], groundParent);
+
+            currentGroundTiles.Add(newTile);
+        }
+
+        //4. 替换史莱姆
+        GameObject newSlime = Instantiate(slimePrefabs[newSeasonIndex], playerPos, Quaternion.identity);
     }
 
-    // ---- 外部控制 ----
+    // ---------- 颜色应用 ----------
+    private void ApplyColor(Color color)
+    {
+        foreach (var sr in tintTargets) sr.color = color;
+    }
 
-    /// <summary>立即跳到下一个季节</summary>
+    // ---------- 外部控制 ----------
     public void NextSeason()
     {
-        int next = (currentIndex + 1) % seasons.Length;
-        SetSeason(next);
+        SetSeason((currentIndex + 1) % seasons.Length);
     }
 
-    /// <summary>按枚举跳转</summary>
     public void SetSeason(Season season)
     {
         for (int i = 0; i < seasons.Length; i++)
-        {
-            if (seasons[i].season == season)
-            {
-                SetSeason(i);
-                return;
-            }
-        }
+            if (seasons[i].season == season) { SetSeason(i); return; }
     }
 
-    /// <summary>按索引跳转，会重启当前季节的计时</summary>
     public void SetSeason(int index)
     {
-        if (seasons == null || seasons.Length == 0) return;
-
+        bool wasRunning = isCycleRunning;
+        StopCycle();
         currentIndex = Mathf.Clamp(index, 0, seasons.Length - 1);
+        StartCoroutine(ApplySeasonChangeWithGround(currentIndex, wasRunning));
+    }
 
-        if (loopCoroutine != null)
-            StartCycle();          // 重启循环，从新季节开始计时
-        else
-            EnterSeason(currentIndex);
+    private IEnumerator ApplySeasonChangeWithGround(int index, bool restartCycle)
+    {
+        // 先替换地面（含动画）
+        yield return StartCoroutine(ReplaceGroundTiles(index));
+        // 再应用颜色（含混合）
+        yield return StartCoroutine(ApplySeasonWithBlend(index));
+        // 若之前循环在运行，则重启
+        if (restartCycle)
+            StartCycle();
     }
 }
