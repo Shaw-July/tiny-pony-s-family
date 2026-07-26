@@ -25,7 +25,6 @@ public class SlimeMode : MonoBehaviour
         playerAudio = GetComponent<PlayerAudio>();
 
         superJumpVFX = GetComponent<SpringSuperJumpVFX>();
-
     }
 
     private void SlimeMove()
@@ -35,8 +34,6 @@ public class SlimeMode : MonoBehaviour
 
         bool isWalking = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f;
         playerAudio.HandleFootsteps(isWalking);
-        
-
     }
 
     [SerializeField] private float minLandingSpeed = 0.5f;
@@ -46,7 +43,6 @@ public class SlimeMode : MonoBehaviour
         float fallSpeed = rb.linearVelocity.y;
         isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
 
-        // ����Ƿ�ӿ������
         if (isGrounded && !wasGrounded && fallSpeed < -minLandingSpeed)
         {
             playerAudio.PlayLand();

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEngine;
 
 public class SeasonManager : MonoBehaviour
@@ -42,6 +43,8 @@ public class SeasonManager : MonoBehaviour
 
     [Header("Slime Prefabs")]
     [SerializeField] private GameObject[] slimePrefabs; // 史莱姆预制体
+
+    [SerializeField] private CameraFollow camFollower;
 
     public event Action<SeasonSetting> OnSeasonChanged;
     public event Action<Color> OnColorChanged;
@@ -203,6 +206,7 @@ public class SeasonManager : MonoBehaviour
 
         //4. 替换史莱姆
         GameObject newSlime = Instantiate(slimePrefabs[newSeasonIndex], playerPos, Quaternion.identity);
+        camFollower.SetFollowTarget(newSlime.transform);
     }
 
     // ---------- 颜色应用 ----------
