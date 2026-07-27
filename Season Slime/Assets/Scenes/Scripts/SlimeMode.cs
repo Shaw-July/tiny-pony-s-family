@@ -8,6 +8,8 @@ public class SlimeMode : MonoBehaviour
     [SerializeField] private float groundCheckDistance = 1f;
     [SerializeField] private LayerMask groundLayer;
 
+    [SerializeField] private float minLandingSpeed = 0.5f;
+
     private float xInput;
     private Rigidbody2D rb;
     private Animator anim;
@@ -33,11 +35,9 @@ public class SlimeMode : MonoBehaviour
         rb.linearVelocity = new Vector2(xInput * moveSpeed, rb.linearVelocity.y);
 
         bool isWalking = isGrounded && Mathf.Abs(rb.linearVelocity.x) > 0.01f;
-        playerAudio.HandleFootsteps(isWalking);
+        if (playerAudio != null)
+            playerAudio.HandleFootsteps(isWalking);
     }
-
-    [SerializeField] private float minLandingSpeed = 0.5f;
-
     private void SlimeJump()
     {
         float fallSpeed = rb.linearVelocity.y;

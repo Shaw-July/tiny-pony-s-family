@@ -171,7 +171,6 @@ public class SeasonManager : MonoBehaviour
         ApplyColor(currentColor);
         OnColorChanged?.Invoke(currentColor);
     }
-
     // ---------- 地面块替换协程（含消失动画） ----------
     private IEnumerator ReplaceGroundTiles(int newSeasonIndex)
     {
@@ -183,11 +182,26 @@ public class SeasonManager : MonoBehaviour
 
         GameObject targetPlayer = GameObject.FindGameObjectWithTag("Player");
         Animator slimeAnim = targetPlayer.GetComponent<Animator>();
-        if(SeasonManager.CycleCount < 2)
+        if (SeasonManager.CycleCount < 2)
             slimeAnim.SetBool("ChangeState", true);
-        Vector3 playerPos = targetPlayer.transform.position;
 
         yield return new WaitForSeconds(groundAnimationDuration);
+
+        // ★ 在销毁前记录旧史莱姆的最新位置和速度（继承运动状态）
+        Vector3 playerPos = Vector3.zero;
+        Vector2 playerVel = Vector2.zero;
+        float playerAngVel = 0f;
+
+        if (targetPlayer != null)
+        {
+            playerPos = targetPlayer.transform.position;
+            Rigidbody2D oldRb = targetPlayer.GetComponent<Rigidbody2D>();
+            if (oldRb != null)
+            {
+                playerVel = oldRb.linearVelocity;      // 旧版改成 oldRb.velocity
+                playerAngVel = oldRb.angularVelocity;
+            }
+        }
 
         // 2. 销毁旧块
         ClearGroundTiles();
@@ -200,15 +214,21 @@ public class SeasonManager : MonoBehaviour
         for (int i = 0; i < spawnPositions.Length; i++)
         {
             GameObject newTile = Instantiate(prefab, spawnPositions[i], spawnRotations[i], groundParent);
-
             currentGroundTiles.Add(newTile);
         }
 
-        //4. 替换史莱姆
+        // 4. 替换史莱姆（继承位置 + 速度）
         GameObject newSlime = Instantiate(slimePrefabs[newSeasonIndex], playerPos, Quaternion.identity);
+
+        Rigidbody2D newRb = newSlime.GetComponent<Rigidbody2D>();
+        if (newRb != null)
+        {
+            newRb.linearVelocity = playerVel;          // 旧版改成 newRb.velocity
+            newRb.angularVelocity = playerAngVel;
+        }
+
         camFollower.SetFollowTarget(newSlime.transform);
     }
-
     // ---------- 颜色应用 ----------
     private void ApplyColor(Color color)
     {
