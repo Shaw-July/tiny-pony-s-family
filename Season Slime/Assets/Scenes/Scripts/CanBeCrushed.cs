@@ -15,7 +15,11 @@ public class CanBeCrushed : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            anim.SetTrigger("Crushed");
+            CurrentSeason identity = other.gameObject.GetComponent<CurrentSeason>();
+            if (identity != null && identity.currentSeason == CurrentSeason.SeasonIdentifier.Autumn)
+            {
+                anim.SetTrigger("Crushed");
+            }
         }
     }
 }
